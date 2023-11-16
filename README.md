@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Energy Challenge:
 
-## Getting Started
+## School Contest
 
-First, run the development server:
+### Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This repository is dedicated to managing and promoting a school contest called the “Energy
+Challenge”. The aim of the contest is to encourage planning and collaborative efforts
+among students and schools to save energy. The contest is open to all types of schools.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Objective
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The main objective of this contest is to educate students about the importance of energy
+conservation and motivate them to take active steps in reducing energy consumption in
+their schools.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Participation
 
-## Learn More
+Interested schools can enroll in the contest and will be provided with a set of guidelines
+and resources to help them plan and implement energy-saving strategies.
 
-To learn more about Next.js, take a look at the following resources:
+## Evaluation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The evaluation will be based on the _amount of energy_ each school manages to save during
+the contest period. The creativity and effectiveness of the implemented energy-saving
+strategies will also be taken into account.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Prizes
 
-## Deploy on Vercel
+Prizes will be awarded to the schools that achieve the highest energy savings. Specific
+details about the prizes will be announced closer to the contest date.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### How to Contribute
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you’re interested in contributing to the management and promotion of this contest,
+please check out our contribution guidelines.
+
+### Contact
+
+If you have any questions or suggestions, feel free to get in touch with us. We’re always
+open to new ideas and suggestions to improve the contest. ccamposn@minenergia.cl
+
+We look forward to your participation in our Energy Challenge!
