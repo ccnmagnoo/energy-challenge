@@ -2,6 +2,8 @@
 
 ## School Contest
 
+<img src='./src/app/static/eg-logo-loop.svg' width='800px'/>
+
 ### Description
 
 This repository is dedicated to managing and promoting a school contest called the “Energy
