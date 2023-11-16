@@ -1,4 +1,4 @@
-# Energy Challenge:
+# Energy Challenge:✨
 
 ## School Contest
 
@@ -38,6 +38,6 @@ please check out our contribution guidelines.
 ### Contact
 
 If you have any questions or suggestions, feel free to get in touch with us. We’re always
-open to new ideas and suggestions to improve the contest. ccamposn@minenergia.cl
+open to new ideas and suggestions to improve the contest. <ccamposn@minenergia.cl>
 
 We look forward to your participation in our Energy Challenge!
