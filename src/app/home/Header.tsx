@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <header>
       <section className={styles.logo}>
-        <Image src={eg_logo} height={100} width={100} alt='eg' />
+        <Image src={eg_logo} height={150} width={150} alt='eg' />
       </section>
       <nav>
         <ul>
