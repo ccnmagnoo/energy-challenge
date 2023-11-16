@@ -8,7 +8,13 @@
 
   --primary: hsl(300, 61%, 35%);
   --secondary: hsl(172, 61%, 46%);
-  --background: hsl(256, 45%, 80%);
+  --primary-background: hsl(256, 45%, 80%);
+  --secondary-background: hsl(252, 38%, 95%);
+  --background: radial-gradient(
+    circle at top 25% left 50%,
+    var(--primary-background) 0%,
+    var(--secondary-background) 100%
+  );
   --caption: hsl(0, 100%, 10%);
   --accent: hsl(197, 100%, 65%) (174, 0, 255);
   --shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
@@ -19,7 +25,8 @@
   :root {
     --primary: #be2ebe;
     --secondary: #00ffdd;
-    --background: #21173d;
+    --primary-background: #21173d;
+    --secondary-background: #0a0812;
     --caption: rgb(255, 255, 255);
     --accent: rgb(0, 183, 255) (174, 0, 255);
     --shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
@@ -45,8 +52,10 @@ body {
   background: var(--background);
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+
   * {
-    border: solid 1px red;
+    // border: solid 1px red;
   }
 
   > header {
@@ -54,25 +63,19 @@ body {
     display: flex;
     position: relative;
     padding: 10px;
-
     justify-content: space-between;
   }
+
   > main {
     flex: 1 1 0;
-
-    > section {
-      background: black;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   > footer {
     flex: 0 0 70px;
   }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
