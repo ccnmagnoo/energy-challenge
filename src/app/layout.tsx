@@ -7,7 +7,7 @@ import { Footer } from './home/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Energy Challenge',
+  title: 'Energy Challenge ' + new Date().getFullYear(),
   // cSpell:disable line
   description: 'Inscribete y participa con tu Colegio y gana con energías renovables',
 };

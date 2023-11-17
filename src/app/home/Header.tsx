@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import eg_logo from '@/app/static/eg-logo-short.svg';
-import styles from './Home.module.scss';
+import styles from './Header.module.scss';
 
 export const Header = () => {
   return (
