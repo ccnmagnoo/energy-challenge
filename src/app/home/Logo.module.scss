@@ -4,9 +4,9 @@ $primary: var(--primary);
   display: flex;
   position: relative;
 
-  * {
-    border: solid red 1px;
-  }
+  // * {
+  //   border: solid red 1px;
+  // }
 
   img#loop_logo {
     width: min(90dvw, 800px);

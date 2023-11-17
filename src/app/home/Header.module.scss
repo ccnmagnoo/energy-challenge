@@ -1,0 +1,11 @@
+.egHeader {
+  > .navbar {
+    > ul {
+      display: flex;
+      gap: 2rem;
+      text-decoration: none;
+      list-style: none;
+      padding-top: 1rem;
+    }
+  }
+}

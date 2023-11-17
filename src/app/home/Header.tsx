@@ -5,15 +5,13 @@ import styles from './Header.module.scss';
 
 export const Header = () => {
   return (
-    <header>
-      <section className={styles.logo}>
-        <Image src={eg_logo} height={150} width={150} alt='eg' />
-      </section>
-      <nav>
+    <header className={styles.egHeader}>
+      <Image src={eg_logo} alt='eg' />
+      <nav className={styles.navbar}>
         <ul>
-          <li>link</li>
-          <li>link</li>
-          <li>link</li>
+          <li>premios</li>
+          <li>ranking</li>
+          <li>dashboard</li>
         </ul>
       </nav>
       <section className={styles.session}>session</section>
