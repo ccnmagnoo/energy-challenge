@@ -6,7 +6,7 @@ import styles from './Header.module.scss';
 export const Header = () => {
   return (
     <header className={styles.egHeader}>
-      <Image src={eg_logo} alt='eg' />
+      <Image id={styles.logo} src={eg_logo} alt='eg' />
       <nav className={styles.navbar}>
         <ul>
           <li>premios</li>
