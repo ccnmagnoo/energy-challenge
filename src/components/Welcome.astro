@@ -8,7 +8,7 @@ const today = new Date()
 	<main>
 		<section id="hero">
 			<a href="http://tinyurl.com/ec-inscripcion"
-				><img src={ecMotion.src} width="600" alt="EnergyChallenge" /></a
+				><img src={ecMotion.src}  alt="EnergyChallenge" /></a
 			>
 			<h1>
 				{today.getFullYear()}
@@ -35,7 +35,7 @@ const today = new Date()
 	}
 	
 	main {
-		background-color: #000;
+		background-color: #010101;
 		color: #fff;
 		height: 100%;
 		display: flex;
@@ -52,6 +52,7 @@ const today = new Date()
 		z-index: 0;
 		img{
 			z-index: 3;
+			width: min(200%,600px);
 		}
 		h1 {
 			position: relative;
