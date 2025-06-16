@@ -1,13 +1,13 @@
-import type { ChallengeMonth } from './month';
+import type { ChallengeMonth } from './ChallengeMonth';
 
 class Challenge {
   launchDate: Date;
-  subscribeLimit: Date;
+  subscriptionLimit: Date;
   challengePeriod: [Date, Date];
   constructor(launch: Date, challengeMonth: ChallengeMonth = 8) {
     this.launchDate = launch;
-    this.subscribeLimit = this.add_days(launch, 30);
-    this.subscribeLimit.setHours(23, 59);
+    this.subscriptionLimit = this.add_days(launch, 30);
+    this.subscriptionLimit.setHours(23, 59);
     this.challengePeriod = this.setChallengePeriod(launch, challengeMonth);
   }
 
@@ -34,4 +34,5 @@ class Challenge {
   }
 }
 
-export { Challenge };
+const ctx = new Challenge(new Date(2025, 6, 5, 10), 8);
+export { Challenge, ctx };

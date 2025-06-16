@@ -1,91 +1,77 @@
 ---
 import ecMotion from '../assets/ec-loop.svg';
-import { Challenge } from '../models/challenge';
+import { Challenge,ctx } from '../models/Challenge';
 import Flare from './Flare.astro'
-const challenge = new Challenge(new Date(2025,6,5,10),8)
+import Subscribe from './SubscribeButton.astro';
 ---
 
 <div id="container">
+	<Flare/>
 	<main>
-		<Flare/>
 		<section id="hero">
-			<a href="http://tinyurl.com/ec-inscripcion"
-				><img src={ecMotion.src}  alt="EnergyChallenge" /></a
-			>
-			<h1 class="year">
-				{challenge.year}
-			</h1>
-			<form action="submit">
-				<input type="text">
-				<button>
-					inscripción hasta el {challenge.subscribeLimit}
-				</button>
-			</form>
-
-		</section>
+		<a href="http://tinyurl.com/ec-inscripcion">
+			<img src={ecMotion.src}  alt="EnergyChallenge" />
+		</a>
+		<h1 id="year">
+			{ctx.year}
+		</h1>
+		<Subscribe/>
+		
+		
+	</section>
 	</main>
-
-	
 </div>
 
-<style is:inline>
-
-	
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-	
-	main {
-		background-color: #010101;
-		color: #fff;
-		height: 100%;
+<style>
+	#container{
+		width: 100vw;
+		height:100%;
+		background:linear-gradient(180deg,#1a241c,#0b0f1d);
+		position: absolute;
 		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		position: relative;
-		display: flex;
-		align-items: start;
 		flex-direction: column;
+		align-items: center;
 		justify-content: center;
-		padding: 16px;
 		z-index: 0;
-		img{
-			z-index: 3;
-			width: min(200%,600px);
-			filter: blur(0px);
-			animation: logoLaunch 3s ease-in-out 1s;
-		}
-		@keyframes logoLaunch {
-			from{
-				filter:blur(10px);
-			}
-			to{
-				filter:blur(0);
-			}
-			
-		}
-		h1.year {
-			position: relative;
-			font-size:16rem;
-			margin-top: -7rem;
-			top:-10rem;
-			align-self:center;
+	}
+	main{
+		/* border: 1px solid red; */
+		margin: 2rem;
+		min-width: min(800px,100%);
+		z-index: 1;
+	}
+	#hero{
+		font-family: Roboto, Arial, sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 0;
+
+		
+		h1 {
+			position: absolute;
+			font-size: 16rem;
+			color: #fff;
+			margin: 0;
+			padding: 0;
 			z-index: -1;
-			color: #000;
-			filter: blur(2px) opacity(.5);
-			animation: yearGhost 3s ease-in-out 1s;	
+			text-shadow: 0px 0px 10px #fff;
+			filter: opacity(0.1);
 		}
-		@keyframes yearGhost {
-			from{
-				filter:blur(0px) opacity(1);
+		img{
+			min-width: min(700px,80dvw);
+			z-index: 2;
+		}
+		
+	}
+	@media screen and (max-width:600px) {
+		#flare{
+			height: 300px;
+		}
+		#hero{
+			h1{
+				font-size: 6rem;
 			}
-			to{
-				filter:blur(3px) opacity(.5)
-			}
-			
 		}
 	}
 

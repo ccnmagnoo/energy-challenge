@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "ec_hero_page",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.9.3"
+    "astro": "^5.9.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
