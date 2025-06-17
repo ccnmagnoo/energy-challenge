@@ -1,53 +1,35 @@
 ---
-import ecMotion from '../assets/ec-loop.svg';
-import { Challenge,ctx } from '../models/Challenge';
-import Flare from './Flare.astro'
-import Subscribe from './SubscribeButton.astro';
+import ecMotion from '../assets/ec-loop.svg'
+import { ctx } from '../models/ChallengeContext'
+import Subscribe from './SubscribeButton.astro'
 ---
 
-<div id="container">
-	<Flare/>
-	<main>
-		<section id="hero">
+<main>
+	<section id="hero">
 		<a href="http://tinyurl.com/ec-inscripcion">
-			<img src={ecMotion.src}  alt="EnergyChallenge" />
+			<img src={ecMotion.src} alt="EnergyChallenge" />
 		</a>
 		<h1 id="year">
 			{ctx.year}
 		</h1>
-		<Subscribe/>
-		
-		
+		<Subscribe />
 	</section>
-	</main>
-</div>
+</main>
 
 <style>
-	#container{
-		width: 100vw;
-		height:100%;
-		background:linear-gradient(180deg,#1a241c,#0b0f1d);
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		z-index: 0;
-	}
-	main{
+	main {
 		/* border: 1px solid red; */
 		margin: 2rem;
-		min-width: min(800px,100%);
+		min-width: min(800px, 100%);
 		z-index: 1;
 	}
-	#hero{
+	#hero {
 		font-family: Roboto, Arial, sans-serif;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		z-index: 0;
 
-		
 		h1 {
 			position: absolute;
 			font-size: 16rem;
@@ -58,21 +40,16 @@ import Subscribe from './SubscribeButton.astro';
 			text-shadow: 0px 0px 10px #fff;
 			filter: opacity(0.1);
 		}
-		img{
-			min-width: min(700px,80dvw);
+		img {
+			min-width: min(700px, 80dvw);
 			z-index: 2;
 		}
-		
 	}
-	@media screen and (max-width:600px) {
-		#flare{
-			height: 300px;
-		}
-		#hero{
-			h1{
+	@media screen and (max-width: 600px) {
+		#hero {
+			h1 {
 				font-size: 6rem;
 			}
 		}
 	}
-
 </style>

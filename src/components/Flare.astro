@@ -1,20 +1,41 @@
-<div id="flare"/>
+<div id="flare"></div>
 
 <style>
-    #flare{
-        position: absolute;
-        /* border: 1px solid red; */
-        top: 0;
-        width: 100%;
-        height: 400px;
-        background:   radial-gradient(ellipse at 0% 0%, #d413c4, transparent 70%),
-        radial-gradient(ellipse at 100% 10%, #0ccfc2, transparent 70%);
-        /* border: 1px solid blue; */
-    }
-    @media screen and (max-width:600px) {
-		#flare{
+	#flare {
+		position: absolute;
+		/* border: 1px solid red; */
+		top: 0;
+		width: 100%;
+		height: 300px;
+		background:
+			radial-gradient(ellipse at 0% 0%, #d413c4, transparent 70%),
+			radial-gradient(ellipse at 100% 10%, #0ccfc2, transparent 70%);
+		/* border: 1px solid blue; */
+		animation: floating 12s ease-in-out infinite;
+	}
+	@keyframes floating {
+		from {
+			height: 300px;
+		}
+
+		50% {
+			height: 400px;
+			filter: hue-rotate(-60deg);
+		}
+	}
+	@media screen and (max-width: 600px) {
+		#flare {
 			height: 500px;
 		}
-		
+		@keyframes floating {
+			from {
+				height: 500px;
+			}
+
+			50% {
+				height: 600px;
+				filter: hue-rotate(-60deg);
+			}
+		}
 	}
 </style>

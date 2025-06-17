@@ -1,100 +1,92 @@
 <div id="subs_wrapper">
-    <div id="ray"/>
-    <a id=subscribe href="https://www.tinyurl.com/ec-inscripcion" target="_self">
-        <span>
-            inscríbete
-        </span>
-        
-        <span class="bgr"/>
-    </a>
+	<div id="ray"></div>
+	<a id="subscribe" href="https://www.tinyurl.com/ec-inscripcion" target="_self">
+		<span> inscríbete </span>
+
+		<span class="bgr"></span>
+	</a>
 </div>
 
 <style>
-    #subs_wrapper{
-        position: relative;
-        /* border: 1px solid white; */
-        padding: 1px;
-        border-radius: 1000px;
-        display: flex;
-        justify-content: center;
-        align-items : center;
-        transition: translateY 150ms ease-out;
-        overflow: hidden;
-    }
-        #subs_wrapper:hover{
-            transform: translateY(2px);
-            .bgr{
-                transform: translate(-5%,-5%);
-                filter: brightness(1.1);
-            }
-            #ray{
-                animation: rotation 1s  linear infinite;
+	#subs_wrapper {
+		position: relative;
+		/* border: 1px solid white; */
+		padding: 1px;
+		border-radius: 1000px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 250ms ease-out;
+		overflow: hidden;
+		.bgr {
+			position: relative;
+			transform: translate(10px, 0px);
+			filter: brightness(1);
+		}
+	}
+	#subs_wrapper:hover {
+		transform: translateY(2px);
+		.bgr {
+			transform: translate(-5px, -5px);
+			filter: brightness(1.1);
+		}
+		#ray {
+			animation: rotation 1s linear infinite;
+		}
+	}
 
-            }
+	#ray {
+		width: 100px;
+		height: 400px;
+		position: absolute;
+		background: linear-gradient(90deg, transparent, #0ccfc2 70%, transparent);
 
-        
-    }
-    
-    #ray{
-        width: 100px;
-        height: 400px;
-        position: absolute;
-        background:linear-gradient(90deg,transparent,#0ccfc2 70%,transparent);
-        
-        animation: rotation 8s  linear infinite;
-       
-        /* border: 1px solid red; */
-        
-    }
-    
-    
-    @keyframes rotation {
-        from{
-            transform: rotate(0deg);
+		animation: rotation 8s linear infinite;
 
-        }
-        to{
-            transform: rotate(360deg);
-        }
-    }
-    #subscribe{
-        --w:250px;
-        --h:80px;
-        --border:10px;
-        position: relative;
-        text-decoration: none;
-        color: #0ccfc2;
-        font-weight: 600;
-        font-size: 1.5rem;
-        /* border: 4px solid #0b0f1d; */
-        width: var(--w);
-        height: var(--h);
-        border-radius: 1000px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow:hidden;
-        z-index:1; 
-        .bgr{
-            width: 120%;
-            height: 120%;
-            background:radial-gradient(ellipse at 25% 25%,#2c2230,#0b0f1d 50%,#263529);
-            position: absolute;
-            z-index: -1;
-            transform: translate(0px,0px);
-        }
-        
-    }
+		/* border: 1px solid red; */
+	}
 
+	@keyframes rotation {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+	#subscribe {
+		--w: 250px;
+		--h: 80px;
+		--border: 10px;
+		position: relative;
+		text-decoration: none;
+		color: #0ccfc2;
+		font-weight: 600;
+		font-size: 1.5rem;
+		/* border: 4px solid #0b0f1d; */
+		width: var(--w);
+		height: var(--h);
+		border-radius: 1000px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		z-index: 1;
+		.bgr {
+			width: 120%;
+			height: 120%;
+			background: radial-gradient(ellipse at 25% 25%, #2c2230, #0b0f1d 50%, #263529);
+			position: absolute;
+			z-index: -1;
+			transform: translate(0px, 0px);
+		}
+	}
 
-
-
-    @media screen and (max-width: 600px){
-        #subscribe{
-
-            --w:150px;
-            --h:60px;
-            font-size: 1rem;
-        }
-    }
+	@media screen and (max-width: 600px) {
+		#subscribe {
+			--w: 150px;
+			--h: 60px;
+			font-size: 1rem;
+		}
+	}
 </style>
