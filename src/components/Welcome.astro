@@ -1,55 +1,61 @@
 ---
 import ecMotion from '../assets/ec-loop.svg'
 import { ctx } from '../models/ChallengeContext'
+import Planner from './Planner.astro'
+import SponsorSection from './SponsorsSection.astro'
 import Subscribe from './SubscribeButton.astro'
+import Subtitle from './Subtitle.astro'
 ---
 
 <main>
 	<section id="hero">
 		<a href="http://tinyurl.com/ec-inscripcion">
-			<img src={ecMotion.src} alt="EnergyChallenge" />
+			<img class="heroLogo" src={ecMotion.src} alt="EnergyChallenge" />
 		</a>
 		<h1 id="year">
 			{ctx.year}
 		</h1>
 		<Subscribe />
+		<Subtitle />
+		<SponsorSection />
+		<Planner />
+
+		<style>
+			main {
+				/* border: 1px solid red; */
+				margin: 2rem;
+				min-width: min(800px, 100%);
+				z-index: 1;
+			}
+			#hero {
+				font-family: Roboto, Arial, sans-serif;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				z-index: 0;
+
+				h1 {
+					position: absolute;
+					font-size: 16rem;
+					color: #fff;
+					margin: 0;
+					padding: 0;
+					z-index: -1;
+					text-shadow: 0px 0px 10px #fff;
+					filter: opacity(0.1);
+				}
+				img.heroLogo {
+					min-width: min(700px, 80dvw);
+					z-index: 2;
+				}
+			}
+			@media screen and (max-width: 600px) {
+				#hero {
+					h1 {
+						font-size: 6rem;
+					}
+				}
+			}
+		</style>
 	</section>
 </main>
-
-<style>
-	main {
-		/* border: 1px solid red; */
-		margin: 2rem;
-		min-width: min(800px, 100%);
-		z-index: 1;
-	}
-	#hero {
-		font-family: Roboto, Arial, sans-serif;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		z-index: 0;
-
-		h1 {
-			position: absolute;
-			font-size: 16rem;
-			color: #fff;
-			margin: 0;
-			padding: 0;
-			z-index: -1;
-			text-shadow: 0px 0px 10px #fff;
-			filter: opacity(0.1);
-		}
-		img {
-			min-width: min(700px, 80dvw);
-			z-index: 2;
-		}
-	}
-	@media screen and (max-width: 600px) {
-		#hero {
-			h1 {
-				font-size: 6rem;
-			}
-		}
-	}
-</style>

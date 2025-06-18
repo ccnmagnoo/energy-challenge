@@ -1,0 +1,31 @@
+---
+import { ctx } from '../models/ChallengeContext'
+import SponsorCard from './SponsorCard.astro'
+
+const sponsors = ctx.sponsors
+---
+
+<article class="sponsors">
+	<p>con el gentil auspicio</p>
+	<div class="container">
+		{sponsors.map((it) => <SponsorCard name={it.name} url={it.url} logo={it.logo} />)}
+	</div>
+</article>
+
+<style>
+	.sponsors {
+		display: block;
+		/* border: 1px red solid; */
+		p {
+			margin: 8px;
+			color: #555;
+		}
+		.container {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+</style>
