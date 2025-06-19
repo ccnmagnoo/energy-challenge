@@ -6,37 +6,32 @@
 		/* border: 1px solid red; */
 		top: 0;
 		width: 100%;
-		height: 300px;
+		filter: hue-rotate(0deg);
+
 		background:
 			radial-gradient(ellipse at 0% 0%, #d413c4, transparent 70%),
 			radial-gradient(ellipse at 100% 0%, #0ccfc2, transparent 70%);
 		/* border: 1px solid blue; */
-		animation: floating 12s ease-in-out infinite;
+		animation: floating 6s ease-in-out infinite alternate-reverse;
 	}
 	@keyframes floating {
 		from {
 			height: 300px;
 		}
 
-		50% {
+		to {
 			height: 400px;
 			filter: hue-rotate(-60deg);
 		}
-		100% {
-			height: 300px;
-		}
 	}
 	@media screen and (max-width: 600px) {
-		#flare {
-			height: 500px;
-		}
 		@keyframes floating {
 			from {
-				height: 400px;
+				height: 100px;
 			}
 
-			50% {
-				height: 600px;
+			to {
+				height: 200px;
 				filter: hue-rotate(-60deg);
 			}
 		}
