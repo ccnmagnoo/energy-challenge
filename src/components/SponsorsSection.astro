@@ -6,7 +6,7 @@ const sponsors = ctx.sponsors
 ---
 
 <article class="sponsors">
-	<p>con el gentil auspicio</p>
+	<p>con el gentil auspicio de</p>
 	<div class="container">
 		{sponsors.map((it) => <SponsorCard name={it.name} url={it.url} logo={it.logo} />)}
 	</div>
@@ -15,9 +15,12 @@ const sponsors = ctx.sponsors
 <style>
 	.sponsors {
 		display: block;
+		margin-top: 2rem;
+
 		/* border: 1px red solid; */
 		p {
 			margin: 8px;
+			font-size: 0.8rem;
 			color: #555;
 		}
 		.container {

@@ -1,22 +1,37 @@
 <article class="planner">
 	<p>organiza</p>
 	<a href="https://www.instagram.com/energiavalpo/" target="_blank" rel="noopener noreferrer">
-		<img
-			src="https://i.postimg.cc/pTFkxNCR/SEREMI-logo-sqr.png"
-			alt="Seremi Energía Valparaíso"
-		/></a
-	>
+		<img src="https://i.postimg.cc/pTFkxNCR/SEREMI-logo-sqr.png" alt="Seremi Energía Valparaíso" />
+		<h3>Seremi Energía <strong> Valparaíso </strong></h3>
+	</a>
 </article>
 
 <style>
 	.planner {
+		a {
+			text-decoration: none;
+			display: flex;
+			color: #777;
+			h3 {
+				font-weight: 400;
+				font-family: Helvetica, Arial, sans-serif;
+				margin: 0;
+				padding-left: 8px;
+				font-size: 1rem;
+				width: 100px;
+				word-wrap: break-word;
+				/* border: 1px solid red; */
+			}
+		}
 		p {
 			color: #555;
+			justify-self: center;
 		}
 		img {
 			transition: all 0.2s ease-out;
-			width: 100px;
-			filter: brightness(1) grayscale(0.5);
+			width: 60px;
+			filter: brightness(1) grayscale(0.7);
+			border-radius: 4px;
 		}
 		img:hover {
 			filter: brightness(1.2) grayscale(0);
