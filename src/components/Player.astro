@@ -1,0 +1,26 @@
+---
+import track from '../assets/el_desafio.mp3'
+---
+
+<audio id="mainTheme" controls>
+	<source src={track} type="audio/mpeg" />
+</audio>
+
+<style>
+	#mainTheme {
+		position: fixed;
+		bottom: 1rem;
+		left: 1rem;
+		height: 48px;
+		/* width: 100px; */
+		&::-webkit-media-controls-panel {
+			background-color: #0ccfc2;
+		}
+	}
+	@media screen and (max-width: 800px) {
+		#mainTheme {
+			left: unset;
+			height: 32px;
+		}
+	}
+</style>

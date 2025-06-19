@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions'
 import Flare from '../components/Flare.astro'
+import Player from '../components/Player.astro'
 ---
 
 <!doctype html>
@@ -26,6 +27,7 @@ import Flare from '../components/Flare.astro'
 		<div id="container">
 			<Flare />
 			<slot />
+			<Player />
 		</div>
 	</body>
 </html>
