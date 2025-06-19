@@ -45,9 +45,11 @@
 			border-radius: 100px;
 			border: #0ccfc2 solid 2px;
 			padding: 8px;
+			filter: brightness(0.6) blur(0.6px);
+			transition: all 250ms ease;
 		}
 		a:hover {
-			filter: brightness(1.2);
+			filter: brightness(1.2) blur(0);
 		}
 	}
 	@media screen and (max-width: 800px) {
@@ -55,6 +57,10 @@
 			p {
 				font-size: 1rem;
 				padding: 8px;
+			}
+			a {
+				font-size: 0.9rem;
+				border-width: 1px;
 			}
 		}
 	}
