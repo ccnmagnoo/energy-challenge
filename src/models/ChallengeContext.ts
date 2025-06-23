@@ -1,10 +1,10 @@
 import moment from 'moment'
-import 'moment/locale/es-cl'
+import 'moment/locale/es'
 import type { Milestones as Milestone, MilestoneKey } from './ChallengeCompound'
 import type { ChallengeMonth } from './ChallengeMonth'
 import type { Sponsor } from './Sponsor'
 
-moment.locale('es-cl')
+moment.locale('es')
 class Challenge {
 	milestone: Milestone
 	_sponsors: Sponsor[] = []

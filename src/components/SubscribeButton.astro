@@ -12,9 +12,17 @@ ctx
 		<span class="bgr"></span>
 	</a>
 </div>
-<p>plazo hasta <span>24.07</span></p>
+<p id="date_limit">plazo hasta <span>24.07</span></p>
 
 <style>
+	#date_limit {
+		color: #0ccfc2;
+		& > span {
+			text-shadow: 0px 0px 5px #0ccfc2;
+			font-size: 1.2rem;
+			font-weight: 800;
+		}
+	}
 	#subs_wrapper {
 		position: relative;
 		/* border: 1px solid white; */
