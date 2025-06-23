@@ -1,22 +1,31 @@
+import type { Milestones as Milestone } from './ChallengeCompound'
 import type { ChallengeMonth } from './ChallengeMonth'
 import type { Sponsor } from './Sponsor'
 
 class Challenge {
-	launchDate: Date
-	subscriptionLimit: Date
-	challengePeriod: [Date, Date]
+	milestone: Milestone
 	_sponsors: Sponsor[] = []
 
 	constructor(launch: Date, challengeMonth: ChallengeMonth = 8) {
-		this.launchDate = launch
-		this.subscriptionLimit = this.add_days(launch, 30)
-		this.subscriptionLimit.setHours(23, 59)
-		this.challengePeriod = this.setChallengePeriod(launch, challengeMonth)
+		const cp = this.setChallengePeriod(launch, 8)
+
+		this.milestone = {
+			launchDate: { eventDate: launch, isDone: true },
+			askMe: { eventDate: this.add_days(launch, 5), isDone: true },
+			subscriptionLimit: { eventDate: this.add_days(launch, 37), isDone: false },
+			permitLimit: { eventDate: this.add_days(launch, 37), isDone: false },
+			reportPlan: { eventDate: this.add_days(launch, 41), isDone: false },
+			reportSavings: { eventDate: this.add_days(launch, 150), isDone: false },
+			rankPublish: { eventDate: this.add_days(launch, 160), isDone: false },
+			awardsDates: { eventDate: new Date(2025, 11, 15, 12, 0), isDone: false },
+			challengePeriod: { start: cp[0], finish: cp[1] }
+		}
 	}
 
 	add_days(date_to_add: Date = new Date(), days: number = 1): Date {
 		const date_copy = new Date(date_to_add)
 		date_copy.setDate(date_copy.getDate() + days)
+		date_copy.setHours(23, 59)
 		return date_copy
 	}
 	setChallengePeriod(launchDate: Date, challengeMonth: ChallengeMonth): [Date, Date] {
@@ -33,11 +42,11 @@ class Challenge {
 		return challenge
 	}
 	get year() {
-		return this.launchDate.getFullYear()
+		return this.milestone.launchDate.eventDate.getFullYear()
 	}
 
 	get shortName() {
-		return '#ec' + this.launchDate.getFullYear().toString().slice(-2)
+		return '#ec' + this.milestone.launchDate.eventDate.getFullYear().toString().slice(-2)
 	}
 
 	addSponsor(sponsors: Sponsor[]) {
