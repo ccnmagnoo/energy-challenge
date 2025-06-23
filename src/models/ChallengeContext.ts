@@ -1,7 +1,10 @@
-import type { Milestones as Milestone } from './ChallengeCompound'
+import moment from 'moment'
+import 'moment/locale/es-cl'
+import type { Milestones as Milestone, MilestoneKey } from './ChallengeCompound'
 import type { ChallengeMonth } from './ChallengeMonth'
 import type { Sponsor } from './Sponsor'
 
+moment.locale('es-cl')
 class Challenge {
 	milestone: Milestone
 	_sponsors: Sponsor[] = []
@@ -10,24 +13,37 @@ class Challenge {
 		const cp = this.setChallengePeriod(launch, 8)
 
 		this.milestone = {
-			launchDate: { eventDate: launch, isDone: true },
-			askMe: { eventDate: this.add_days(launch, 5), isDone: true },
-			subscriptionLimit: { eventDate: this.add_days(launch, 37), isDone: false },
-			permitLimit: { eventDate: this.add_days(launch, 37), isDone: false },
-			reportPlan: { eventDate: this.add_days(launch, 41), isDone: false },
-			reportSavings: { eventDate: this.add_days(launch, 150), isDone: false },
-			rankPublish: { eventDate: this.add_days(launch, 160), isDone: false },
+			launchDate: { eventDate: launch, isDone: false },
+			askMe: { eventDate: this.addDays(launch, 5), isDone: false },
+			subscriptionLimit: { eventDate: this.addDays(launch, 37), isDone: false },
+			permitLimit: { eventDate: this.addDays(launch, 37), isDone: false },
+			reportPlan: { eventDate: this.addDays(launch, 41), isDone: false },
+			reportSavings: { eventDate: this.addDays(launch, 150), isDone: false },
+			rankPublish: { eventDate: this.addDays(launch, 160), isDone: false },
 			awardsDates: { eventDate: new Date(2025, 11, 15, 12, 0), isDone: false },
 			challengePeriod: { start: cp[0], finish: cp[1] }
 		}
 	}
 
-	add_days(date_to_add: Date = new Date(), days: number = 1): Date {
+	addDays(date_to_add: Date = new Date(), days: number = 1): Date {
 		const date_copy = new Date(date_to_add)
 		date_copy.setDate(date_copy.getDate() + days)
 		date_copy.setHours(23, 59)
 		return date_copy
 	}
+
+	toggleTask(key: MilestoneKey) {
+		this.milestone[key].isDone = !this.milestone[key].isDone
+	}
+
+	relativeTime(key: MilestoneKey) {
+		return moment(this.milestone[key].eventDate).fromNow()
+	}
+
+	fmtTime(key: MilestoneKey, fmt: string) {
+		return moment(this.milestone[key].eventDate).format(fmt)
+	}
+
 	setChallengePeriod(launchDate: Date, challengeMonth: ChallengeMonth): [Date, Date] {
 		const challenge = [new Date(launchDate), new Date(launchDate)] as [Date, Date]
 		//set 8:00h 1st of X month
