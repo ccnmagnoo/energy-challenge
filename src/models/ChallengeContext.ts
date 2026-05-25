@@ -73,33 +73,38 @@ class Challenge {
 	}
 }
 
-const ctx = new Challenge(new Date(2025, 6, 5, 10), 8)
+const ctx = new Challenge(new Date(2026, 5, 5, 10), 8)
 //sponsors
 ctx.addSponsor([
 	{
 		name: 'Isa Energía',
-		url: 'https://interchilesa.com/es/',
-		logo: 'https://interchilesa.com/wp-content/uploads/2025/03/isa-energia.logo_.png'
+		url: 'https://chile.isaenergia.com/es/',
+		logo: 'https://intchasprdf978a3e925.blob.core.windows.net/blobintchasprdf978a3e925/wp-content/uploads/2025/03/isa-energia.logo_.png'
 	},
 	{
-		name: 'Chilquinta Energía',
-		url: 'https://www.chilquinta.cl/',
-		logo: 'https://a.storyblok.com/f/82872/x/ea4cc123a6/logo_chilquinta.svg'
+		name: 'CGE',
+		url: 'https://www.cge.cl/',
+		logo: 'https://www.cge.cl/wp-content/uploads/2022/08/cge.png'
 	},
 	{
 		name: 'Copec SA',
 		url: 'https://ww2.copec.cl/personas',
 		logo: 'https://copec.cdn.modyo.com/uploads/590bf3e3-8a92-4ece-b770-c5e0c07374f4/original/logo_copec_90_an_os_1_.webp'
 	},
-	{
-		name: 'Inacap',
-		url: 'https://portal.inacap.cl/',
-		logo: 'https://digital.inacap.cl/recursos/inacap-liferay/img/logo-footer.png'
-	},
-	{
-		name: 'DuocUC Valparaíso',
-		logo: 'https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg',
-		url: 'https://www.duoc.cl/sedes/valparaiso/'
-	}
+	// {
+	// 	name: 'Chilquinta Energía',
+	// 	url: 'https://www.chilquinta.cl/',
+	// 	logo: 'https://a.storyblok.com/f/82872/x/ea4cc123a6/logo_chilquinta.svg'
+	// },
+	// {
+	// 	name: 'Inacap',
+	// 	url: 'https://portal.inacap.cl/',
+	// 	logo: 'https://digital.inacap.cl/recursos/inacap-liferay/img/logo-footer.png'
+	// },
+	// {
+	// 	name: 'DuocUC Valparaíso',
+	// 	logo: 'https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg',
+	// 	url: 'https://www.duoc.cl/sedes/valparaiso/'
+	// }
 ])
 export { Challenge, ctx }
