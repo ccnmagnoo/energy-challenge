@@ -28,7 +28,7 @@ import Player from '../components/Player.astro'
 			content="Concursa en #ec25 salva el planeta y gana fabulosos premios para tu colegio"
 		/>
 
-		<title>#ec25</title>
+		<title>#ec:Forever</title>
 		<ClientRouter />
 	</head>
 	<body>
@@ -45,12 +45,13 @@ import Player from '../components/Player.astro'
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
-		box-sizing: content-box;
+		height: 100vh;
+		box-sizing: border-box;
 		padding: 0;
+		overflow-x: hidden;
 	}
 	#container {
-		width: 100vw;
+		width: 100svw;
 		min-height: 100vh;
 		background: linear-gradient(180deg, #1a241c, #0b0f1d);
 		position: absolute;
