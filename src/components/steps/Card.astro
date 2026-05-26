@@ -1,0 +1,25 @@
+---
+import Appear from '../Appear.astro';
+const {title,content,index=0,image_src} = Astro.props;
+
+---
+<Appear>
+    <article class="card">
+        <section class="media">
+            <img src={image_src} alt={title}>
+        </section>
+        <section class="content">
+
+            <h2 class="index">
+                Paso {{index}}
+            </h2>
+            <h3 class="title">
+                {{title}}    
+                
+            </h3>
+            <p class="description">
+                {{content}}
+            </p>
+        </section>
+        </article>
+</Appear>
