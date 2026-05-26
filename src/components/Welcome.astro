@@ -11,7 +11,7 @@ import Subtitle from './Subtitle.astro'
 	<section id="hero">
 		<!-- <a href="http://tinyurl.com/ec-inscripcion"> -->
 		<a href="#">
-			<img class="heroLogo" src={ecMotion.src} alt="EnergyChallenge" />
+			<img id="hero-logo" src={ecMotion.src} alt="EnergyChallenge" />
 		</a>
 		<h1 id="year">
 			{ctx.year}
@@ -41,33 +41,51 @@ import Subtitle from './Subtitle.astro'
 		z-index: 0;
 		/* border: 1px red solid; */
 		/* margin-top: 1vh; */
-
-		#year {
-			position: absolute;
-			font-size: 18rem;
-			color: #fffdfd;
-			margin: 0;
-			padding: 0;
-			z-index: -1;
-			text-shadow: 0px 0px 10px #fff;
-			filter: opacity(0.5);
-			animation: flickering-year 6s ease-in-out infinite alternate-reverse;
-
+	}
+	#hero-logo{
+		animation: fadeIn 1s ease-in-out;
+		opacity: 1;
+		min-width: min(700px, 80dvw);
+		z-index: 2;
+	}
+	@keyframes fadeIn {
+		from{
+			opacity: 0;
+			transform: translateY(20px);
+			transform: scale(1.2);
 		}
-		@keyframes flickering-year {
-			from{
-				filter:opacity(0.1);
-			}
-			to{
-				filter:opacity(0.8);
-			}
-		}
-
-		img.heroLogo {
-			min-width: min(700px, 80dvw);
-			z-index: 2;
+		to{
+			opacity: 1;
+			transform: translateY(0);
+			transform: scale(1);
 		}
 	}
+
+	#year {
+		position: absolute;
+		font-size: 18rem;
+		color: #fffdfd;
+		margin: 0;
+		padding: 0;
+		z-index: -1;
+		text-shadow: 0px 0px 10px #fff;
+		/* filter: opacity(0.5); */
+		opacity: 0.6;
+		animation: flickering 1s ease-in-out;
+		backdrop-filter: blur(5px);
+
+	}
+	@keyframes flickering {
+		from{
+			opacity: 0;
+			transform: scale(.8);
+		}
+		to{
+			opacity: 0.6;
+			transform: scale(1);		
+		}
+	}
+
 	@media screen and (max-width: 600px) {
 		#hero {
 			#year {
