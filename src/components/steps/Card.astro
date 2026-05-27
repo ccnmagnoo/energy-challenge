@@ -1,0 +1,97 @@
+---
+import Appear from '../Appear.astro';
+const {title,content,head,image_src,reverse=false} = Astro.props;
+---
+<style>
+    .card {
+        display: flex;
+        flex-direction:row;
+        background-color: #00000071;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        padding: 1rem;
+        max-width: 600px;
+        margin: 1rem auto;
+        margin-top: 4rem;
+        font-family:Roboto,Cantarell,'Helvetica Neue',sans-serif;
+        /* border: 1px solid #d5bbdf; */
+
+    }
+    .reverse{
+        flex-direction: row-reverse;
+    }
+    .media {
+        img {
+            max-width: 380px;
+            border-radius: 200rem;
+            object-fit: cover;
+        }
+    }
+    .content {
+        padding: 1rem;
+        color: #fff;
+
+        .index {
+            font-size: 2rem;
+            color: #d5bbdf78;
+            margin: 0;
+            font-style: italic;
+        }
+        .title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            font-family:monospace;
+            background: #000000;
+            color: #d5bbdf;
+            margin:0;
+            padding: 0 1rem;
+            border: 1px solid #d5bbdf;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .description {
+            font-size: 1rem;
+            line-height: 1.5;
+            max-width: 400px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .card {
+            flex-direction: column;
+            max-width: 80dvw;
+        }
+        .content {
+            .title {
+                font-size: 1.2rem;
+            }
+            .description {
+                font-size: 0.9rem;
+            }
+        }
+    }
+</style>
+<Appear>
+    <article class=`card ${reverse ? 'reverse' : ''}`>
+        <section class="media">
+            {image_src && <img src={image_src} alt={title}>}
+        </section>
+        <section class="content">
+            <div>
+
+                
+                <h2 class="index">
+                    {head}
+                </h2>
+                <h3 class="title">
+                    {title}    
+                    
+                </h3>
+                <p class="description">
+                    {content}
+                </p>
+            </div>
+            <slot/>
+        </section>
+        </article>
+</Appear>

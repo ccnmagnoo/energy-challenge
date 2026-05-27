@@ -1,17 +1,16 @@
 ---
 import { ctx } from '../models/ChallengeContext'
+import Appear from './Appear.astro'
 import SponsorCard from './SponsorCard.astro'
 
 const sponsors = ctx.sponsors
 ---
-
 <article class="sponsors">
 	<p>con el gentil auspicio de</p>
 	<div class="container">
 		{sponsors.map((it) => <SponsorCard name={it.name} url={it.url} logo={it.logo} />)}
 	</div>
 </article>
-
 <style>
 	.sponsors {
 		display: block;

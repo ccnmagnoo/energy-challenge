@@ -1,0 +1,47 @@
+---
+import Card from './Card.astro'
+import ecMotion from '../../assets/ec-loop.svg'
+import Subscribe from '../SubscribeButton.astro'
+import kitties_science from '../../assets/kitties/kitties_science.png';
+import kitties_plan from '../../assets/kitties/kitties_plan.png';
+import kitties_tv from '../../assets/kitties/kitties_tv.png';
+import kitties_winner from '../../assets/kitties/kitties_winner.png';
+
+---	
+    
+    <Card
+    head="paso 1"
+		title="conforma tu equipo"
+		content="Conforma tu equipo ganador y prepárate para la competencia. Necesitas al menos 8 integrantes: entre ellos un coordinador, el equipo de promoción, los inspectores y el equipo de innovación."
+        image_src={kitties_science.src}
+		>
+	</Card>
+    <Card
+        head="paso 2"
+        title="diseña tu plan"
+		content="La planificación es clave, diseña un plan inteligente para generar ahorros energéticos en tu colegio."
+        image_src={kitties_plan.src}
+        reverse={true}
+		>
+	</Card>
+    <Card
+    head="paso 3"
+    title="ahorra energía"
+		content="Durante 30 días pon en marcha tu plan de acción y ahorra energía en tu colegio. Se implacable con el desperdicio energético, cada kWh acción cuenta."
+        image_src={kitties_tv.src}
+		>
+	</Card>
+    <Card
+    head="paso final"
+    title="gana la competencia"
+		content="Tu esfuerzo se verá recompensado, gana fabulosos premios por tu desempeño en la competencia."
+        image_src={kitties_winner.src}
+        reverse={true}
+		>
+	</Card>
+    <Card
+        title="inscríbete"
+        content=""   
+		>
+        <Subscribe />
+	</Card>
