@@ -3,21 +3,30 @@ import { ctx } from "../models/ChallengeContext";
 import ecMotion from "../assets/ec-loop.svg";
 ---
 
-<> 		<!-- <a href="http://tinyurl.com/ec-inscripcion"> -->
+<section id="hero-logo-section"> 		<!-- <a href="http://tinyurl.com/ec-inscripcion"> -->
 		<a href="#">
 			<img id="hero-logo" src={ecMotion.src} alt="EnergyChallenge" />
 		</a>
 		<h1 id="year">
 			{ctx.year}
 		</h1>
-</>
+</section>
 
 <style>
+
+#hero-logo-section {
+	z-index: 0;
+	/* border: 1px solid red; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 #hero-logo{
+		z-index: 0;
 		animation: fadeIn 1s ease-in-out;
 		opacity: 1;
 		min-width: min(700px, 80dvw);
-		z-index: 2;
 	}
 	@keyframes fadeIn {
 		from{
@@ -33,6 +42,7 @@ import ecMotion from "../assets/ec-loop.svg";
 	}
 
 	#year {
+		font-family: Roboto, Arial, sans-serif;
 		position: absolute;
 		font-size: 18rem;
 		color: #fffdfd;
@@ -57,8 +67,8 @@ import ecMotion from "../assets/ec-loop.svg";
 		}
 	}
 
-	@media screen and (max-width: 600px) {
-		#hero {
+	@media screen and (max-width: 700px) {
+		#hero-logo-section {
 			#year {
 				font-size: 7rem;
 			}

@@ -1,5 +1,6 @@
 ---
 import track from '../assets/el_desafio_funk.mp3'
+const { autoplay=false } = Astro.props
 ---
 
 <section id="player_wrapper">
@@ -20,7 +21,7 @@ import track from '../assets/el_desafio_funk.mp3'
 			</h4>
 		</article>
 	</a>
-	<audio id="mainTheme" controls autoplay>
+	<audio id="mainTheme" controls autoplay={autoplay}>
 		<source src={track} type="audio/mpeg" />
 	</audio>
 </section>

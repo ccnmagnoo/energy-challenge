@@ -3,19 +3,27 @@ import { ctx } from '../models/ChallengeContext'
 
 ctx
 ---
+<section class="hero-button">
 
-<div id="subs_wrapper">
-	<div id="ray"></div>
-	<!-- <a id="subscribe" href="https://www.tinyurl.com/ec-inscripcion" target="_self"> -->
-	<a id="subscribe" href="#" target="_self">
-		<span> pronto </span>
-
-		<span class="bgr"></span>
-	</a>
-</div>
-<p id="date_limit">a partir del <span>8 Jun</span></p>
+	<div id="subs_wrapper">
+		<!-- <a id="subscribe" href="https://www.tinyurl.com/ec-inscripcion" target="_self"> -->
+		<a id="subscribe" href="#" target="_self">
+			<span> pronto </span>
+			
+			<span class="bgr"></span>
+		</a>
+		<div id="ray"></div>
+	</div>
+	<p id="date_limit">a partir del <span>8 Jun</span></p>
+</section>
 
 <style>
+	.hero-button{
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	#date_limit {
 		color: #ffffff;
 		text-align: center;
@@ -31,10 +39,13 @@ ctx
 		padding: 1px;
 		border-radius: 1000px;
 		display: flex;
+		
 		justify-content: center;
 		align-items: center;
 		transition: all 250ms ease-out;
 		overflow: hidden;
+		width: fit-content;
+		z-index: 0;
 		.bgr {
 			position: relative;
 			transform: translate(10px, 0px);
