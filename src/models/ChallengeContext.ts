@@ -84,7 +84,7 @@ ctx.addSponsor([
 	{
 		name: 'CGE',
 		url: 'https://www.cge.cl/',
-		logo: 'https://www.cge.cl/wp-content/uploads/2022/08/cge.png'
+		logo: 'https://sucursalvirtual.cge.cl/documents/38803/42091/logo-cge-transparent.png'
 	},
 	{
 		name: 'Copec SA',

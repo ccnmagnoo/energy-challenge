@@ -1,5 +1,5 @@
 ---
-import Appear from '../Appear.astro';
+import Appear from './Appear.astro';
 const {title,content,head,image_src,reverse=false} = Astro.props;
 ---
 <style>
@@ -67,6 +67,15 @@ const {title,content,head,image_src,reverse=false} = Astro.props;
             }
             .description {
                 font-size: 0.9rem;
+            }
+        }
+        .media {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width:  90%;
+                aspect-ratio: 1/1.1;
             }
         }
     }

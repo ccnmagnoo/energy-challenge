@@ -1,8 +1,4 @@
 ---
-import { ctx } from '../models/ChallengeContext'
-import type { Sponsor } from '../models/Sponsor'
-import Appear from './Appear.astro'
-
 const { name, url, logo } = Astro.props
 ---
 	<a class="sponsorCard" href={url}>
@@ -12,13 +8,16 @@ const { name, url, logo } = Astro.props
 	.sponsorCard {
 		/* border: 1px blue solid; */
 		.sponsorLogo {
-			width: 80px;
-			filter: grayscale(1) brightness(2);
+			width: 100px;
+			height: 50px;
+			filter: grayscale(.9) brightness(2);
 			object-fit: contain;
 			transition: all 0.1s ease-in-out;
+			padding:4px;
 		}
 		.sponsorLogo:hover {
 			filter: grayscale(0) brightness(1);
+			border-radius: 4px;
 		}
 	}
 </style>
