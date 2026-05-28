@@ -1,7 +1,35 @@
 ---
 import ContentPage from "../../components/ContentPage.astro";
+import records from '../../assets/records.json'
+import { ctx } from "../../models/ChallengeContext";
 ---
 
 <ContentPage>
- <h2>Records</h2>
+ <h2>Registro 2022-2025</h2>
+ <p>Este registro contiene todos los establecimientos desde el 2022, que han implementado un <a class="innerlink" href="/plan">Plan de Acción</a>.</p>
+ <p>Si implementaste este plan de acción el <bold>{ctx.year-1}</bold>, puedes presentar los consumos del año <bold>{ctx.year-2}</bold>.
+<h3>Los Participantes </h3>
+<table>
+    <thead>
+        <tr>
+            <td>establecimiento</td>
+            <td>comuna</td>
+            <td>concurso</td>
+            <td>puesto</td>
+        </tr>
+    </thead>
+    <tbody>
+        {records.map((it)=>(
+        <tr>
+            <td>{it.establecimiento}</td>
+            <td>{it.comuna}</td>
+            <td>{it.concurso}</td>
+            <td>{it.rank}</td>
+        </tr>))}
+
+    </tbody>
+</table>
+
+<p>EnergyChallenge 2026</p>
+
 </ContentPage>

@@ -1,0 +1,212 @@
+[
+  {
+    "establecimiento": "Escuela Ulda Aracena González",
+    "concurso": "ec25",
+    "comuna": "Nogales",
+    "rank": "🥇"
+  },
+  {
+    "establecimiento": "Santa María College",
+    "concurso": "ec25",
+    "comuna": "Santa María",
+    "rank": "🥈"
+  },
+  {
+    "establecimiento": "Liceo José Manuel Borgoño Núñez",
+    "concurso": "ec25",
+    "comuna": "Petorca",
+    "rank": "🥉"
+  },
+  {
+    "establecimiento": "Instituto Abdón Cifuentes",
+    "concurso": "ec25",
+    "comuna": "San Felipe",
+    "rank": "4"
+  },
+  {
+    "establecimiento": "Eleuterio Ramírez Molina",
+    "concurso": "ec25",
+    "comuna": "Quilpué",
+    "rank": "5"
+  },
+  {
+    "establecimiento": "Liceo Guillermo Cotapos",
+    "concurso": "ec25",
+    "comuna": "Viña del Mar",
+    "rank": "6"
+  },
+  {
+    "establecimiento": "Colegio Niño Jesús De Praga",
+    "concurso": "ec25",
+    "comuna": "Quillota",
+    "rank": "7"
+  },
+  {
+    "establecimiento": "Entidad Individual Educacional Soedine",
+    "concurso": "ec25",
+    "comuna": "Los Andes",
+    "rank": "8"
+  },
+  {
+    "establecimiento": "Escuela Básica El Porvenir",
+    "concurso": "ec25",
+    "comuna": "Llay-Llay",
+    "rank": "9"
+  },
+  {
+    "establecimiento": "Colegio El Melón",
+    "concurso": "ec24",
+    "comuna": "Nogales",
+    "rank": "🥇"
+  },
+  {
+    "establecimiento": "Escuela Teniente Ignacio Serrano Montaner",
+    "concurso": "ec24",
+    "comuna": "Quilpué",
+    "rank": "🥈"
+  },
+  {
+    "establecimiento": "Colegio María Montessori",
+    "concurso": "ec24",
+    "comuna": "Los Andes",
+    "rank": "🥉"
+  },
+  {
+    "establecimiento": "Colegio Fundadores De La Calera",
+    "concurso": "ec24",
+    "comuna": "La Calera",
+    "rank": "4"
+  },
+  {
+    "establecimiento": "Colegio Gea",
+    "concurso": "ec24",
+    "comuna": "Quilpué",
+    "rank": "5"
+  },
+  {
+    "establecimiento": "Liceo Bicentenario Antumapu",
+    "concurso": "ec24",
+    "comuna": "La Calera",
+    "rank": "6"
+  },
+  {
+    "establecimiento": "Saint Benedict College",
+    "concurso": "ec24",
+    "comuna": "Viña del Mar",
+    "rank": "7"
+  },
+  {
+    "establecimiento": "Escuela San Ignacio De Loyola",
+    "concurso": "ec23",
+    "comuna": "Valparaíso",
+    "rank": "🥇"
+  },
+  {
+    "establecimiento": "Liceo Bicentanario Manuel De Salas De Casablanca",
+    "concurso": "ec23",
+    "comuna": "Casablanca",
+    "rank": "🥈"
+  },
+  {
+    "establecimiento": "Liceo Bicentenario Polivalente Fernando Silva Castellón",
+    "concurso": "ec23",
+    "comuna": "Catemu",
+    "rank": "🥉"
+  },
+  {
+    "establecimiento": "Escuela Juan José Latorre Benavente",
+    "concurso": "ec23",
+    "comuna": "Valparaíso",
+    "rank": "4"
+  },
+  {
+    "establecimiento": "Colegio Robles",
+    "concurso": "ec23",
+    "comuna": "Villa Alemana",
+    "rank": "5"
+  },
+  {
+    "establecimiento": "Colegio San Pedro Nolasco",
+    "concurso": "ec23",
+    "comuna": "Valparaíso",
+    "rank": "6"
+  },
+  {
+    "establecimiento": "Liceo Nacional De Llolleo",
+    "concurso": "ec23",
+    "comuna": "San Antonio",
+    "rank": "7"
+  },
+  {
+    "establecimiento": "Escuela Emigdio Galdames Robles",
+    "concurso": "ec23",
+    "comuna": "Rinconada",
+    "rank": "8"
+  },
+  {
+    "establecimiento": "Colegio Roberto Matta",
+    "concurso": "ec23",
+    "comuna": "Quillota",
+    "rank": "9"
+  },
+  {
+    "establecimiento": "Colegio Peumayen",
+    "concurso": "ec23",
+    "comuna": "Cartagena",
+    "rank": "10"
+  },
+  {
+    "establecimiento": "Escuela E-298 España",
+    "concurso": "ec22",
+    "comuna": "Valparaíso",
+    "rank": "🥇"
+  },
+  {
+    "establecimiento": "Colegio Luis Cruz Martinez",
+    "concurso": "ec22",
+    "comuna": "Quilpué",
+    "rank": "🥈"
+  },
+  {
+    "establecimiento": "Escuela Industrial Grc San Felipe",
+    "concurso": "ec22",
+    "comuna": "San Felipe",
+    "rank": "🥉"
+  },
+  {
+    "establecimiento": "Colegio Alborada De Curauma",
+    "concurso": "ec22",
+    "comuna": "Valparaíso",
+    "rank": "4"
+  },
+  {
+    "establecimiento": "Liceo Menesiano Sagrado Corazón",
+    "concurso": "ec22",
+    "comuna": "Llay-Llay",
+    "rank": "5"
+  },
+  {
+    "establecimiento": "Eleuterio Ramirez Molina",
+    "concurso": "ec22",
+    "comuna": "Quilpué",
+    "rank": "6"
+  },
+  {
+    "establecimiento": "Escuela España Los Andes",
+    "concurso": "ec22",
+    "comuna": "Los Andes",
+    "rank": "7"
+  },
+  {
+    "establecimiento": "Colegio San Pedro Nolasco",
+    "concurso": "ec22",
+    "comuna": "Valparaíso",
+    "rank": "8"
+  },
+  {
+    "establecimiento": "Liceo José Cortes Brown Recreo",
+    "concurso": "ec22",
+    "comuna": "Viña del Mar",
+    "rank": "9"
+  }
+]
