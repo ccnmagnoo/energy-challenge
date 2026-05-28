@@ -1,20 +1,28 @@
 ---
 import ContentPage from "../../components/ContentPage.astro";
+import kittiesPlan from "../../assets/kitties/kitties_plan.png"
+import kittiesTeam from "../../assets/kitties/kitties_science.png"
+import kittiesTv from "../../assets/kitties/kitties_tv.png"
+import kittiesUnplug from "../../assets/kitties/kitties_unplug.png"
+import kittiesWin from "../../assets/kitties/kitties_winner.png"
 ---
 
 <ContentPage>
- <h2>Cómo hacer un Plan de Acción Energético</h2>
- <p>Para que leer si puedes escuchar un buen funk explicandotelo, <br> por tu afro y escucha😎👇 </p>
- <iframe src="https://suno.com/embed/2209b493-01e1-44ca-b13c-6127b59ee03d" 
- width="100%" 
+<article class="rules-article">
+    <h2>Cómo hacer un Plan de Acción Energético</h2>
+    <p>Para que leer si puedes escuchar un buen funk explicandotelo, <br> por tu afro y escucha😎👇 </p>
+    <iframe src="https://suno.com/embed/2209b493-01e1-44ca-b13c-6127b59ee03d" 
+    width="100%" 
  height="160" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
  
- <a href="https://suno.com/song/2209b493-01e1-44ca-b13c-6127b59ee03d">Listen on Suno
+<!-- eslint-disable-next-line -->
+<a href="https://suno.com/song/2209b493-01e1-44ca-b13c-6127b59ee03d">Listen on Suno
 </a>
 </iframe>
 <h3>
     Ahora veamoslo con detalles
 </h3>
+<img src={kittiesPlan.src} alt="gatitos planificando">
 <p>
     El  <bold>Plan de Acción Energético</bold> es la acción fundamental donde las acciones de tu establecimiento educacional elabora, planifica y coordina las acciones de eficiencia energética en tu colegio.
     Parece complicado pero para eso hemos elaborado herramientas online para ayudar su elaboración <a class="innerlink" href="https://tinyurl.com/ec-buenaspractica" target="_blank" rel="noopener noreferrer">haciendo click aquí</a>.  
@@ -25,6 +33,7 @@ import ContentPage from "../../components/ContentPage.astro";
 <h3>
     Capitulo 1 del plan: Team Escolar
 </h3>
+<img src={kittiesTeam.src} alt="gatitos organizando equipo">
 <p>
     Se definen los el equipo escolar de voluntarios que quieren participar; 
     es aquí donde define quienes son, cuáles son sus funciones y la responsabilidades del equipo. Cada componente del equipo
@@ -53,8 +62,9 @@ Son estudiantes o profesores que tienen una labor específica de ahorro energét
 </p>
 
 <h3>
-   Capitulo 2 del plan: Unidades de consumo 
+    Capitulo 2 del plan: Unidades de consumo 
 </h3>
+<img src={kittiesTv.src} alt="gatitos identificando">
 <p>
     Se definen cuales con los puntos de consumo crítico para éxito del plan, 
     donde se hace un levantamiento de donde está , qué tipo de artefacto consumidor es, 
@@ -71,32 +81,37 @@ Son estudiantes o profesores que tienen una labor específica de ahorro energét
 <h3>
     Capitulo 3 del plan: Medidas de eficiencia energética
 </h3>
+<img src={kittiesUnplug.src} alt="gatitos ahorrando">
 <p>
     En esta sección de plan se definen las acciones concretas a realizar, y los 
     responsables de cada acción. Este es el corazón del concurso, y definen a los ganadores 
     y su lugar en el podio. El Plan de buenas prácticas tiene que definirlas claramente y pueden se mejoradas en el tiempo, para hacer la acción más efectiva para el ahorro energético.
 </p>
 <h4>Tips para ganadores</h4>
-Históricamente los competidores de #EC han tenido tremendos ahorros. De ellos podemos sacar 
-algunas lecciones importantes. Si buscas llegar a la cima del concurso, no te olvides considerar 
-tener en mete las siguientes metas:
+<img src={kittiesWin.src} alt="gatitos ganadores"/>
+<p>
+    Históricamente los competidores de #EC han tenido tremendos ahorros. De ellos podemos sacar 
+    algunas lecciones importantes. Si buscas llegar a la cima del concurso, no te olvides considerar 
+    tener en mete las siguientes metas:
+</p>
 <section class="podium">
-                <div>
-
-                    <h4>30% de ahorro⭐</h4>
-                    <p>Ya eres un colegio <bold>competitivo</bold> y hay algunas posibilidades de llegar al podio</p>
+    <div>
+        
+        <h4>30% de ahorro⭐</h4>
+        <p>Ya eres un colegio <bold>competitivo</bold> y hay algunas posibilidades de llegar al podio</p>
                 </div>
                 <div>
 
-                    <h4>35% de ahorro⭐⭐</h4>
-                    <p>Aumentan tus posibilidades de estar<bold>en los primeros 3 lugares</bold>, hay que seguir ahorrando</p>
+                    <h4>34% de ahorro⭐⭐</h4>
+                    <p>Aumentan tus posibilidades de estar <bold>en los primeros 3 lugares</bold>, hay que seguir ahorrando</p>
                 </div>
                 <div>
-                    <h4>40% de ahorro⭐⭐⭐</h4>
+                    <h4>38% de ahorro⭐⭐⭐</h4>
                     <p>
-                        Ya tu colegio es competitivo y está listo para disputar el <bold>1er Lugar</bold>🏆
+                        Ya tu colegio es un peso pesado de ahorro y está listo para disputar el <bold>1er Lugar</bold>🏆
                     </p>
-    
+                    
                 </div>
             </section>
+</article>
 </ContentPage>
