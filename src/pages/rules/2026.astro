@@ -115,11 +115,27 @@ import { ctx } from '../../models/ChallengeContext'
             <p>
                 El presente concurso premiará al colegio con mayor ahorro energético entre los siguientes periodos.
             </p>
+             <h4>
+                ⚡Energía en COMPETENCIA
+            </h4>
+            <p>
+              Corresponde al consumo eléctrico en kiloWatts-hora, hecho por un periodo de <bold>31 días</bold>. 
+              Dicho tiempo igual para todos, será durante en el cuál los colegios competirán para ver quién genera mayor ahorro energético.
+              El periodo de esta versión será la siguiente :  
+            </p>
+            <p class="quote highlights">
+                lectura desde <bold>agosto de {ctx.year}</bold> hasta <bold>septiembre de {ctx.year}</bold>
+            </p>
+            <p>
+                El día de agosto en el cuál comenzarán con dicho periodo de <bold>31 días</bold>, será el día correspondiente al <bold>día de lectura</bold> de la boleta eléctrica. El cuál,
+                puede ser los días 1ro, 5, 15, 21, según lo dictamine la boleta eléctrica.
+            </p>
+
             <h4>
                 ⚡Energía BASE
             </h4>
             <p>
-                Consumo  que se utilizará como referente de comparación de los ahorros energéticos, y corresponderá al periodo de:
+                Corresponde al consumo eléctrico en kiloWatts-hora que se utilizará como referente de comparación de los ahorros energéticos. La boleta de consumo corresponderá al periodo de:
             </p>
             <p class="quote highlights">
                 lectura desde <bold>agosto de {ctx.year-1}</bold> hasta <bold>septiembre de {ctx.year-1}</bold>
@@ -129,15 +145,21 @@ import { ctx } from '../../models/ChallengeContext'
                 Es decir, para las <bold>lecturas</bold> de agosto de {ctx.year-1}, se deben considerar las boletas <bold style="color:yellow">facturadas</bold> en septiembre de {ctx.year-1}.
                 <br>Asimismo, también se aceptarán como boletas de agosto aquellas cuya fecha de lectura sea 31 de julio*, ya que la mayor parte de su consumo registrado corresponde a días del mes de agosto.
             </p>
-            <h4>
-                ⚡Energía COMPETENCIA
-            </h4>
             <p>
-              Consumo de energía con el cuál los colegios competirán cuál es el que genera mayor ahorro energético, y corresponde al perdiodo de :  
+                En caso de boletas a presentar como <bold>energía base</bold> tenga una lectura por más de 31 días,
+                se calculará un promedio de agosto basados en el consumo medio, basados en la siguiente fórmula.
             </p>
-            <p class="quote highlights">
-                lectura desde <bold>agosto de {ctx.year}</bold> hasta <bold>septiembre de {ctx.year}</bold>
-            </p>
+            <article class="formula">
+                <div class="left">
+                    Energía<span>proporcional</span> [kWh] = 
+                </div>
+                <div class="right">
+                    <p>Energía<span>base</span> x Días<span>mes (ej:31)</span></p>
+                    <hr>
+                    <p>Días<span>lectura (ej:45,60,90)</span></p>
+                </div>
+            </article>
+
             <h4>Atención participantes #EC anteriores</h4>
             <p>
             ¿Qué pasa si mi colegio participó antes ejecutando acciones horro energético de #energychallenge anterior?
