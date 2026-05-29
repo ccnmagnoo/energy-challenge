@@ -147,6 +147,27 @@ import HeroLogo from './HeroLogo.astro';
              }   
             }
         }
+        @media screen and (max-width:700px) {
+            table{
+                font-size: .8rem;
+                margin:1rem 0;
+                padding:.32rem;
+                td.shrink{
+                    display:none;
+                }
+                a{
+                    font-size: .8rem;
+                    span{
+                        display:none;
+                    }
+                }
+                a::before{
+                    content: 'ir';
+                }
+                
+            }
+        }
+
 
         section.podium{
             display:flex;
