@@ -192,6 +192,7 @@ import HeroLogo from './HeroLogo.astro';
             justify-content: center;
             gap:10px;
             flex:1;
+            flex-wrap: wrap;
             font-size: .9rem;
             box-sizing: border-box;
             >div{
@@ -199,6 +200,8 @@ import HeroLogo from './HeroLogo.astro';
                 padding:8px 8px;
                 border-radius: 8px;
                 border:3px solid var(--primary);
+                max-width: 190px;
+                min-height: 210px;
             }
 
             h4{
@@ -207,19 +210,18 @@ import HeroLogo from './HeroLogo.astro';
                 margin-top: 1rem;
             }
             p{
-                width:170px;
-                margin-bottom: 1rem;
                 text-align: justify;
-                padding: 0 1rem;
+
+                width: 180px;
             }
         }
         @media screen and (max-width:700px) {
             section.podium{
-                flex-direction: column;
+            
                 align-items: center;
                 gap:10px;
                 p{
-                    width: 80dvw;
+                    
                 }
             }
         }
