@@ -15,8 +15,8 @@ import { ctx } from "../../models/ChallengeContext";
     <thead>
         <tr>
             <td>establecimiento</td>
-            <td>comuna</td>
-            <td>concurso</td>
+            <td class="shrink">comuna</td>
+            <td class="shrink">concurso</td>
             <td>puesto</td>
         </tr>
     </thead>
@@ -24,8 +24,8 @@ import { ctx } from "../../models/ChallengeContext";
         {records.map((it)=>(
         <tr>
             <td>{it.establecimiento}</td>
-            <td>{it.comuna}</td>
-            <td>{it.concurso}</td>
+            <td class="shrink">{it.comuna}</td>
+            <td class="shrink">{it.concurso}</td>
             <td>{it.rank}</td>
         </tr>))}
 

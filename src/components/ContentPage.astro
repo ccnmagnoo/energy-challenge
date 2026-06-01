@@ -69,9 +69,26 @@ import HeroLogo from './HeroLogo.astro';
             transition: all .1s ease-in-out;
             align-self: center;
 
-        &:hover{
-            background-color: var(--secondary);
+            &:hover{
+                background-color: var(--secondary);
             
+            }
+            img{
+                width: 220px;
+                height: 220px;
+                object-fit:cover;
+                border-radius: 1em;
+                align-self: center;
+            }
+        }
+        @media screen and (max-width:700px) {
+            a.button{
+                padding:.5rem .7rem;
+
+                img{
+                    width: 120px;
+                    height: 120px;
+                }
             }
         }
         
@@ -147,6 +164,27 @@ import HeroLogo from './HeroLogo.astro';
              }   
             }
         }
+        @media screen and (max-width:700px) {
+            table{
+                font-size: .8rem;
+                margin:1rem 0;
+                padding:.32rem;
+                td.shrink{
+                    display:none;
+                }
+                a{
+                    font-size: .8rem;
+                    span{
+                        display:none;
+                    }
+                }
+                a::before{
+                    content: 'ir';
+                }
+                
+            }
+        }
+
 
         section.podium{
             display:flex;
