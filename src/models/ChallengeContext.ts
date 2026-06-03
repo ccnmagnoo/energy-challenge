@@ -90,12 +90,12 @@ ctx.addSponsor([
 		name: 'Copec SA',
 		url: 'https://ww2.copec.cl/personas',
 		logo: 'https://copec.cdn.modyo.com/uploads/590bf3e3-8a92-4ece-b770-c5e0c07374f4/original/logo_copec_90_an_os_1_.webp'
-	}
-	// {
-	// 	name: 'Chilquinta Energía',
-	// 	url: 'https://www.chilquinta.cl/',
-	// 	logo: 'https://a.storyblok.com/f/82872/x/ea4cc123a6/logo_chilquinta.svg'
-	// },
+	},
+	{
+		name: 'Chilquinta Energía',
+		url: 'https://www.chilquinta.cl/',
+		logo: 'https://a.storyblok.com/f/82872/x/ea4cc123a6/logo_chilquinta.svg'
+	},
 	// {
 	// 	name: 'Inacap',
 	// 	url: 'https://portal.inacap.cl/',
