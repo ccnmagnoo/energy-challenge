@@ -1,0 +1,43 @@
+---
+import Planner from './Planner.astro'
+import SponsorSection from './SponsorsSection.astro'
+import Steps from './steps/Steps.astro'
+import Subscribe from './SubscribeButton.astro'
+import Subtitle from './Subtitle.astro'
+import HeroLogo from './HeroLogo.astro'
+---
+
+<main>
+	<section id="hero">
+		<HeroLogo />
+		<Subscribe />
+
+		<SponsorSection />
+		<Planner />
+	</section>
+	<section id="steps">
+
+	</section>
+</main>
+
+<style>
+	main {
+		/* border: 1px solid red; */
+		position: relative;
+		margin: 2rem;
+		min-width: min(800px, 100%);
+		z-index: 1;
+	}
+	#hero {
+		font-family: Roboto, Arial, sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20%;
+		justify-content: flex-start;
+		z-index: 0;
+		/* border: 1px red solid; */
+		/* margin-top: 1vh; */
+	}
+
+</style>
