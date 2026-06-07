@@ -5,9 +5,9 @@ import ecMotion from "../assets/ec-loop.svg";
 
 <section id="hero-logo-section"> 		<!-- <a href="http://tinyurl.com/ec-inscripcion"> -->
 		<a href="/">
-			<img id="hero-logo" src={ecMotion.src} alt="EnergyChallenge" />
+			<img id="hero-logo" src={ecMotion.src} alt="EnergyChallenge" transition:name="heroLogo"/>
 		</a>
-		<h1 id="year">
+		<h1 id="year" transition:name="heroYear">
 			{ctx.year}
 		</h1>
 </section>
