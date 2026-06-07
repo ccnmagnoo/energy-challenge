@@ -1,20 +1,20 @@
 ---
 import { ctx } from '../models/ChallengeContext'
 
-ctx
+const {link="/",title="pronto"} = Astro.props
 ---
 <section class="hero-button">
 
 	<div id="subs_wrapper">
 		<!-- <a id="subscribe" href="https://www.tinyurl.com/ec-inscripcion" target="_self"> -->
-		<a id="subscribe" href="#" target="_self">
-			<span> pronto </span>
+		<a id="subscribe" href={link} target="_self">
+			<span> {title} </span>
 			
 			<span class="bgr"></span>
 		</a>
 		<div id="ray"></div>
 	</div>
-	<p id="date_limit">a partir del <span>8 Jun</span></p>
+	<p id="date_limit">inscripciones hasta el <span>10 Jul</span></p>
 </section>
 
 <style>

@@ -2,6 +2,7 @@
 import { ClientRouter } from 'astro:transitions'
 import Flare from '../components/Flare.astro'
 import Player from '../components/Player.astro'
+const {hasPlayer=true} = Astro.props
 ---
 
 <!doctype html>
@@ -38,7 +39,7 @@ import Player from '../components/Player.astro'
 		<div id="container">
 			<Flare />
 			<slot />
-			<Player />
+			{hasPlayer && <Player />}
 		</div>
 	</body>
 </html>

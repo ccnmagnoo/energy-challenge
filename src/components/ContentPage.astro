@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroLogo from './HeroLogo.astro';
+const {hasPlayer} = Astro.props
 ---
-<Layout>
+<Layout hasPlayer={hasPlayer}>
     <HeroLogo/>
     <section class="rules">
         <slot/>

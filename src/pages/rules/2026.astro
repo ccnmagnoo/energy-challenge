@@ -1,8 +1,9 @@
 ---
 import ContentPage from '../../components/ContentPage.astro'
 import SponsorsSection from '../../components/SponsorsSection.astro'
-import SubscribeButton from '../../components/SubscribeButton.astro'
+import Subscribe from '../../components/SubscribeButton.astro'
 import { ctx } from '../../models/ChallengeContext'
+
 ---
 <ContentPage>
     <article class="rules-article">
@@ -14,7 +15,7 @@ import { ctx } from '../../models/ChallengeContext'
                 del concurso estudiantil #EnergyChallenge.</p>
             
     
-            <SubscribeButton/>
+            <Subscribe link="/https://www.tinyurl.com/ec-inscripcion" title="registro"/>
          
       
             <p class="quote highlights">
@@ -317,6 +318,7 @@ import { ctx } from '../../models/ChallengeContext'
                 El Desafío de Energía
                 </p>
             </a>
+            <Subscribe link="/https://www.tinyurl.com/ec-inscripcion" title="registro"/>
     
 
 
