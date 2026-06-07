@@ -11,7 +11,7 @@ import { ctx } from '../../models/ChallengeContext'
         <h2>bases #ec {ctx.year}</h2>
             <h3>Convocatoria</h3>
             <p>La Seremi Energía Valparaíso invita a los tod@s los estudiantes, profesores y directores de los establecimientos 
-                educacionales de enseñanza básica y media de la <bold>región de Valparaíso</bold>, a participar del concurso estudiantil #EnergyChallenge {ctx.year}, donde el establecimiento que genere más ahorros ganará fabulosos premios.</p>
+                educacionales de enseñanza básica y media de la <bold>región de Valparaíso</bold>, a participar del concurso estudiantil #EnergyChallenge {ctx.year}, donde el establecimiento que genere más  energéticos ganará fabulosos premios.</p>
             
     
             <Subscribe link="https://www.tinyurl.com/ec-inscripcion" title="registro"/>
@@ -26,8 +26,8 @@ import { ctx } from '../../models/ChallengeContext'
             </h3>
             <p>
                 #EnergyChallenge es un concurso estudiantil que busca inculcar el <bold>buen uso de la energía</bold> 
-                en todos los establecimientos de la región de Valparaíso, premiando a los colegios que logren mayor 
-                eficiencia energética en un periodo de tiempo de <bold>31 días</bold>.
+                en todos los establecimientos de la región de Valparaíso,mediante la sana competencia y premiando a los colegios que logren mayor 
+                eficiencia energética en un periodo de tiempo de <bold>31 días</bold>. Atrévete a participar y demuestra que tu colegio es el más eficiente energéticamente de la región.
             </p>
             <h3>
                 Auspiciadores
@@ -75,9 +75,7 @@ import { ctx } from '../../models/ChallengeContext'
 
              <h3> Ganadores 🏆</h3>
              <p>
-                Los Ganadores se seleccionarán a partir del ranking la
-                diferencia porcentual del consumo energético del periodo base y el periodo de evaluación, 
-                en orden descendiente, con respecto a la siguiente formula:
+                Los Ganadores se seleccionarán a partir del ranking porcentual del consumo energético. Este porcentaje se calcula a partir del consumo del periodo base y el consumo periodo de evaluación del presente año, y se ordenarán en orden descendiente con el valor obtenido con respecto a la siguiente formula:
              </p>
 
              <article class="formula">
@@ -91,7 +89,7 @@ import { ctx } from '../../models/ChallengeContext'
                 x
                 </div>
                 <div class="right">
-                    <p>Energía<span>base</span> - Energía<span>competencia</span></p>
+                    <p>Energía<span>base</span> - Energía<span>evaluada</span></p>
                     <hr>
                     <p>Energía<span>base</span></p>
 
@@ -99,12 +97,12 @@ import { ctx } from '../../models/ChallengeContext'
              </article>
              <p>
                 Serán considerados candidatos 
-                válidos al podio de ganadores solamente los ahorros calculados <bold style="color:greenyellow">positivos(+)</bold>. 
-                Los valores <bold style="color:orangered">negativos(-)</bold> se considerarán como incremento del consumo, y quedarán automaticamente descalificados.
+                válidos al podio de ganadores solamente los ahorros calculados con valores <bold style="color:greenyellow">positivos(+)</bold>. 
+                Los valores <bold style="color:orangered">negativos(-)</bold> se considerarán como incremento del consumo, y quedarán descalificados del podio.
              </p>
              <p>
                 En el caso de “empate técnico” se utilizará todos los decimales 
-                necesarios de la fórmula para dirimir y establecer los ganadores. El último colegio ganador ganó por 0.001% ¡cada miliwatt cuenta!
+                necesarios de la fórmula para dirimir y establecer los ganadores. El último colegio al entrar al podio ganó por 0.001% ¡cada miliwatt cuenta!
              </p>
 
             <h3>Establecimientos admitidos</h3>
@@ -124,23 +122,23 @@ import { ctx } from '../../models/ChallengeContext'
                 El presente concurso premiará al colegio con mayor ahorro energético entre los siguientes periodos.
             </p>
             <h4>
-                ⚡Energía en COMPETENCIA
+                ⚡Energía en Evaluación
             </h4>
             <p>
-            Corresponde al consumo eléctrico en kiloWatts-hora, hecho por un periodo de <bold>31 días</bold>. 
-            Dicho tiempo igual para todos, será durante en el cuál los colegios competirán para ver quién genera mayor ahorro energético.
+            Corresponde al consumo eléctrico en kiloWatts-hora, realizado en un periodo de <bold>1 mes</bold>. 
+            Dicho periodo es igual para todos, y será durante en el cuál los colegios competirán para ver quién genera mayor ahorro energético.
             El periodo de esta versión será la siguiente :  
             </p>
             <p class="quote highlights">
                 lectura desde <bold>agosto de {ctx.year}</bold> hasta <bold>septiembre de {ctx.year}</bold>
             </p>
             <p>
-                El día de agosto en el cuál comenzarán con dicho periodo de <bold>31 días</bold>, será el día correspondiente al <bold>día de lectura</bold> de la boleta eléctrica. El cuál,
-                puede ser los días 1ro, 5, 15, 21, según lo dictamine la boleta eléctrica.
+                El día de agosto en el cuál comenzarán con dicho periodo de <bold>1 mes</bold>, será el día correspondiente al <bold>día de lectura</bold> de la boleta eléctrica. El cuál,
+                puede ser los días 1ro, 5, 15, 21, según lo dicte la boleta eléctrica.
             </p>
 
             <h4>
-                ⚡Energía BASE
+                ⚡Energía Base
             </h4>
             <p>
                 Corresponde al consumo eléctrico en kiloWatts-hora que se utilizará como referente de comparación de los ahorros energéticos. La boleta de consumo corresponderá al periodo de:
@@ -170,7 +168,7 @@ import { ctx } from '../../models/ChallengeContext'
 
             <h4>Atención participantes #EC anteriores</h4>
             <p>
-            ¿Qué pasa si mi colegio participó antes ejecutando acciones horro energético de #energychallenge anterior?
+            ¿Qué pasa si mi colegio participó antes ejecutando acciones ahorro energético de #energychallenge anterior?
             <bold>¿Eso no afecta mi capacidad de ahorro energético del periodo actual?</bold>
             </p>
             <p style="color:orange;font-size:1.1rem;">Respuesta: SI 😱</p>
@@ -179,7 +177,7 @@ import { ctx } from '../../models/ChallengeContext'
                 Para solucionar esta  "desventaja", todos los establecimientos que participaron en #EC e <bold>implementaron</bold> un 
                 <a class="innerlink" href="/plan">Plan de Acción Energético</a> en 
                 #EnergyChallenge anteriores, pueden opcionalmente presentar 
-                como ⚡Energía BASE los consumos eléctricos del año inmediatamente anterior o el año inmediatamente 
+                como ⚡Energía Base los consumos eléctricos del año inmediatamente anterior o el año inmediatamente 
                 posterior a dicho periodo de implementación del <a class="innerlink" href="/plan">Plan de Acción Energético</a>
             </p>
             <br>
@@ -194,7 +192,7 @@ import { ctx } from '../../models/ChallengeContext'
                     <tr><td>Si participó en #ec{ctx.year-2} y #ec{ctx.year-1}</td><td>si</td><td>puede presentar boletas {ctx.year-3}</td></tr>
                 </tbody>
             </table>
-            <a class="button" href="/records" target="_blank">ver listado de participantes histórico</a>
+            <a class="button" href="/records">ver listado de participantes histórico</a>
             
            
             <h3> Etapas y Plazos 📅</h3>
