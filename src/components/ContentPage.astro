@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/LayoutColor.astro';
 import HeroLogo from './HeroLogo.astro';
-const {hasPlayer} = Astro.props
+const {hasPlayer, wide = false} = Astro.props
 ---
 <Layout hasPlayer={hasPlayer}>
     <HeroLogo/>
-    <section class="rules">
+    <section class="rules" class:list={{ wide }}>
         <slot/>
     </section>
 </Layout>
@@ -16,7 +16,13 @@ const {hasPlayer} = Astro.props
         --accent:#e958ff;
         font-family: Roboto, Arial, sans-serif;
         z-index: 2;
-        max-width: 680px;
+        align-self: stretch;
+        max-width: 744px;
+        margin-inline: auto;
+        box-sizing: border-box;
+        &.wide {
+            max-width: 1104px;
+        }
         background-color: rgba(0, 0, 0, 0.678);
         padding:2rem;
         border-radius: 1rem;

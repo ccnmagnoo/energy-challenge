@@ -1,0 +1,618 @@
+---
+import ContentPage from '../../components/ContentPage.astro'
+import kittyWinners from '../../assets/kitties/kitties_winner.png'
+import { formatAhorro, ranking } from '../../models/Ranking'
+
+const anio = ranking.anio
+const medallas = ['🥇', '🥈', '🥉']
+const lugares: Record<number, string> = {
+	1: '1er lugar',
+	2: '2do lugar',
+	3: '3er lugar'
+}
+
+const ganadores = ranking.ganadores
+const podio = ganadores.filter((it) => it.puesto <= 3).slice(0, 3)
+const resto = ganadores.filter((it) => it.puesto > 3)
+const ahorros = ganadores
+	.map((it) => it.ahorro)
+	.filter((it): it is number => typeof it === 'number')
+const ahorroLider = ahorros.length ? Math.max(...ahorros) : undefined
+
+const anchoBarra = (ahorro?: number) => {
+	if (typeof ahorro !== 'number' || !ahorroLider) return 0
+	return Math.max(8, Math.round((ahorro / ahorroLider) * 100))
+}
+---
+
+<ContentPage wide hasPlayer={false}>
+	<article class="ranking">
+		<header class="ranking-hero">
+			<div class="hero-copy">
+				<p class="eyebrow">⚡ #EnergyChallenge {anio}</p>
+				<h1>
+					{ranking.titulo ?? 'Ganadores'}
+					<span class="year">{anio}</span>
+				</h1>
+				{ranking.bajada && <p class="bajada">{ranking.bajada}</p>}
+				<ul class="hero-stats">
+					<li>
+						<strong>{ganadores.length}</strong>
+						<span>establecimientos</span>
+					</li>
+					{
+						ahorroLider !== undefined && (
+							<li>
+								<strong>{formatAhorro(ahorroLider)}</strong>
+								<span>ahorro líder</span>
+							</li>
+						)
+					}
+					<li>
+						<strong>{podio.length}</strong>
+						<span>en el podio</span>
+					</li>
+				</ul>
+				{ranking.actualizado && <p class="updated">Actualizado el {ranking.actualizado}</p>}
+			</div>
+			<figure class="hero-art">
+				<img
+					src={kittyWinners.src}
+					alt="Gatitos celebrando a los ganadores del concurso con un trofeo dorado"
+				/>
+			</figure>
+		</header>
+
+		<section aria-labelledby="titulo-podio">
+			<div class="section-head">
+				<h2 id="titulo-podio">El podio</h2>
+				<p>Los tres grandes del ahorro energético</p>
+			</div>
+			<div class="podium">
+				{
+					podio.map((ganador) => (
+						<article class:list={['podium-card', `place-${ganador.puesto}`]}>
+							{ganador.puesto === 1 && <span class="champion-tag">Campeón {anio}</span>}
+							<div class="medal" aria-hidden="true">
+								{medallas[ganador.puesto - 1] ?? '🏅'}
+							</div>
+							<p class="place-label">{lugares[ganador.puesto] ?? `Puesto ${ganador.puesto}`}</p>
+							<h3>{ganador.establecimiento}</h3>
+							<p class="commune">{ganador.comuna}</p>
+							{formatAhorro(ganador.ahorro) && (
+								<p class="savings">
+									<strong>{formatAhorro(ganador.ahorro)}</strong>
+									<span>de ahorro energético</span>
+								</p>
+							)}
+							{ganador.descripcion && <p class="description">{ganador.descripcion}</p>}
+						</article>
+					))
+				}
+			</div>
+		</section>
+
+		{
+			resto.length > 0 && (
+				<section class="rest" aria-labelledby="titulo-tabla">
+					<div class="section-head">
+						<h2 id="titulo-tabla">Tabla de posiciones</h2>
+						<p>Del 4º lugar en adelante</p>
+					</div>
+					<ol class="ranking-list">
+						{resto.map((ganador) => (
+							<li>
+								<span class="rank-number">{ganador.puesto}</span>
+								<div class="school">
+									<strong>{ganador.establecimiento}</strong>
+									<span>{ganador.comuna}</span>
+								</div>
+								<div class="saving-meter">
+									<span class="saving-value">{formatAhorro(ganador.ahorro) ?? '—'}</span>
+									{ganador.ahorro !== undefined && (
+										<span class="meter" aria-hidden="true">
+											<i style={`width: ${anchoBarra(ganador.ahorro)}%`} />
+										</span>
+									)}
+								</div>
+							</li>
+						))}
+					</ol>
+				</section>
+			)
+		}
+
+		<footer class="ranking-footer">
+			<p>
+				El registro completo de todas las ediciones está disponible en
+				<a class="innerlink" href="/records/">el registro histórico</a>.
+			</p>
+			<a class="button" href="/rules/2026">Conoce las bases del concurso</a>
+		</footer>
+	</article>
+</ContentPage>
+
+<style>
+	.ranking {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.ranking-hero {
+		position: relative;
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+		align-items: center;
+		gap: 1.5rem;
+		padding: clamp(1.25rem, 4vw, 2.5rem);
+		overflow: hidden;
+		border: 1px solid rgba(159, 45, 252, 0.45);
+		border-radius: 1.5rem;
+		background:
+			radial-gradient(circle at 15% 20%, rgba(159, 45, 252, 0.35), transparent 55%),
+			radial-gradient(circle at 90% 80%, rgba(5, 209, 236, 0.18), transparent 50%),
+			linear-gradient(145deg, rgba(20, 12, 36, 0.95), rgba(6, 16, 24, 0.95));
+		box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+			opacity: 0.22;
+			background-image:
+				radial-gradient(rgba(255, 215, 106, 0.9) 1px, transparent 1.5px),
+				radial-gradient(rgba(5, 209, 236, 0.8) 1px, transparent 1.5px);
+			background-position:
+				0 0,
+				26px 30px;
+			background-size:
+				52px 52px,
+				74px 74px;
+		}
+	}
+
+	.hero-copy,
+	.hero-art {
+		position: relative;
+		z-index: 1;
+	}
+
+	.eyebrow {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		width: fit-content;
+		margin: 0 0 1rem;
+		padding: 0.35rem 0.8rem;
+		border: 1px solid rgba(5, 209, 236, 0.4);
+		border-radius: 999px;
+		background: rgba(5, 209, 236, 0.08);
+		color: #05d1ec;
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.hero-copy h1 {
+		margin: 0;
+		color: #fff;
+		font-size: clamp(2.6rem, 6.5vw, 4.8rem);
+		line-height: 0.95;
+		letter-spacing: -0.04em;
+		text-wrap: balance;
+
+		.year {
+			display: block;
+			background: linear-gradient(100deg, #ffd76a, #e958ff 50%, #05d1ec);
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			filter: drop-shadow(0 0 18px rgba(233, 88, 255, 0.35));
+		}
+	}
+
+	.bajada {
+		max-width: 52ch;
+		margin: 1.2rem 0 0;
+		color: #d9d4e8;
+		font-size: 1.05rem;
+		line-height: 1.55;
+	}
+
+	.hero-stats {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin: 1.5rem 0 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			flex: 1 1 100px;
+			padding: 0.7rem 0.9rem;
+			border: 1px solid rgba(255, 255, 255, 0.08);
+			border-radius: 0.8rem;
+			background: rgba(0, 0, 0, 0.35);
+		}
+
+		strong {
+			display: block;
+			color: #ffd76a;
+			font-size: 1.35rem;
+			line-height: 1.1;
+			font-variant-numeric: tabular-nums;
+		}
+
+		span {
+			color: #a8a5bd;
+			font-size: 0.72rem;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+		}
+	}
+
+	.updated {
+		margin-top: 0.9rem;
+		color: #8f8ba6;
+		font-size: 0.8rem;
+	}
+
+	.hero-art {
+		margin: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			min-height: 330px;
+			max-height: 430px;
+			object-fit: cover;
+			object-position: 50% 42%;
+			border: 1px solid rgba(255, 215, 106, 0.35);
+			border-radius: 1.25rem;
+			box-shadow: 0 0 45px rgba(159, 45, 252, 0.3);
+		}
+	}
+
+	.section-head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 1rem;
+
+		h2 {
+			margin: 0;
+			color: #fff;
+			font-size: 1.6rem;
+			letter-spacing: -0.02em;
+		}
+
+		p {
+			color: #8f8ba6;
+			font-size: 0.85rem;
+		}
+	}
+
+	.podium {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.podium-card {
+		--metal: #ffd76a;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 1.5rem 1.25rem 1.75rem;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		border-radius: 1.25rem;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.55));
+		box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+		text-align: center;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
+
+		&:hover {
+			transform: translateY(-4px);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0 0 auto;
+			height: 3px;
+			background: linear-gradient(90deg, transparent, var(--metal), transparent);
+		}
+
+		h3 {
+			margin: 0.25rem 0 0;
+			color: #fff;
+			font-size: 1.25rem;
+			line-height: 1.2;
+			text-wrap: balance;
+		}
+	}
+
+	.place-1 {
+		--metal: #ffd76a;
+		order: 1;
+		padding-top: 2.4rem;
+		border-color: rgba(255, 215, 106, 0.55);
+		background: linear-gradient(180deg, rgba(255, 215, 106, 0.22), rgba(12, 8, 20, 0.88) 55%);
+		box-shadow:
+			0 0 55px rgba(255, 215, 106, 0.14),
+			0 22px 60px rgba(0, 0, 0, 0.4);
+
+		h3 {
+			font-size: 1.5rem;
+		}
+	}
+
+	.place-2 {
+		--metal: #d5dfea;
+		order: 2;
+		border-color: rgba(213, 223, 234, 0.4);
+		background: linear-gradient(180deg, rgba(213, 223, 234, 0.16), rgba(10, 12, 20, 0.88) 55%);
+	}
+
+	.place-3 {
+		--metal: #e3a373;
+		order: 3;
+		border-color: rgba(227, 163, 115, 0.4);
+		background: linear-gradient(180deg, rgba(227, 163, 115, 0.16), rgba(12, 10, 16, 0.88) 55%);
+	}
+
+	.champion-tag {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		padding: 0.3rem 0.9rem 0.35rem;
+		border-radius: 0 0 0.6rem 0.6rem;
+		background: linear-gradient(90deg, #b8860b, #ffd76a);
+		color: #1b1300;
+		font-size: 0.68rem;
+		font-weight: 800;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		white-space: nowrap;
+		transform: translateX(-50%);
+	}
+
+	.medal {
+		font-size: min(3.5rem, 18vw);
+		line-height: 1;
+		filter: drop-shadow(0 0 14px rgba(255, 215, 106, 0.55));
+	}
+
+	.place-1 .medal {
+		font-size: min(4.4rem, 22vw);
+		animation: champion-glow 2.4s ease-in-out infinite;
+	}
+
+	@keyframes champion-glow {
+		0%,
+		100% {
+			filter: drop-shadow(0 0 12px rgba(255, 215, 106, 0.45));
+			transform: translateY(0);
+		}
+
+		50% {
+			filter: drop-shadow(0 0 24px rgba(255, 215, 106, 0.85));
+			transform: translateY(-3px);
+		}
+	}
+
+	.place-label {
+		margin: 0;
+		color: var(--metal);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+	}
+
+	.commune {
+		margin: 0;
+		color: #b7b3ca;
+		font-size: 0.9rem;
+	}
+
+	.savings {
+		margin: 0.55rem 0 0;
+
+		strong {
+			display: block;
+			color: var(--metal);
+			font-size: 2.2rem;
+			line-height: 1;
+			font-variant-numeric: tabular-nums;
+			text-shadow: 0 0 22px rgba(255, 215, 106, 0.25);
+		}
+
+		span {
+			display: block;
+			margin-top: 0.2rem;
+			color: #a8a5bd;
+			font-size: 0.68rem;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+	}
+
+	.description {
+		margin: 0.55rem 0 0;
+		color: #ccc8dc;
+		font-size: 0.86rem;
+		line-height: 1.45;
+	}
+
+	.rest {
+		padding: 1.4rem;
+		border: 1px solid rgba(159, 45, 252, 0.28);
+		border-radius: 1.25rem;
+		background: rgba(0, 0, 0, 0.38);
+	}
+
+	.ranking-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: grid;
+			grid-template-columns: 2.6rem minmax(0, 1fr) minmax(7rem, 0.45fr);
+			align-items: center;
+			gap: 1rem;
+			padding: 0.85rem 0.25rem;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			&:hover {
+				border-radius: 0.6rem;
+				background: rgba(159, 45, 252, 0.08);
+			}
+		}
+	}
+
+	.rank-number {
+		display: grid;
+		place-items: center;
+		width: 2.2rem;
+		height: 2.2rem;
+		border: 1px solid rgba(5, 209, 236, 0.35);
+		border-radius: 50%;
+		background: linear-gradient(145deg, rgba(159, 45, 252, 0.5), rgba(5, 209, 236, 0.2));
+		color: #fff;
+		font-weight: 800;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.school {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+
+		strong {
+			color: #f1eefb;
+			font-size: 0.98rem;
+			line-height: 1.25;
+		}
+
+		span {
+			color: #8f8ba6;
+			font-size: 0.78rem;
+		}
+	}
+
+	.saving-meter {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.3rem;
+	}
+
+	.saving-value {
+		color: #ffd76a;
+		font-size: 0.95rem;
+		font-weight: 700;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.meter {
+		display: block;
+		width: 100%;
+		height: 0.4rem;
+		overflow: hidden;
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.1);
+
+		i {
+			display: block;
+			height: 100%;
+			border-radius: inherit;
+			background: linear-gradient(90deg, #9f2dfc, #05d1ec);
+			box-shadow: 0 0 10px rgba(5, 209, 236, 0.45);
+		}
+	}
+
+	.ranking-footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 0.5rem;
+		text-align: center;
+
+		p {
+			color: #a8a5bd;
+			font-size: 0.9rem;
+		}
+	}
+
+	@media screen and (min-width: 760px) {
+		.podium {
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			align-items: end;
+		}
+
+		.place-2 {
+			order: 1;
+		}
+
+		.place-1 {
+			order: 2;
+		}
+
+		.place-3 {
+			order: 3;
+		}
+	}
+
+	@media screen and (max-width: 760px) {
+		.ranking-hero {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-art img {
+			min-height: 240px;
+			max-height: 300px;
+		}
+
+		.section-head {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.2rem;
+		}
+
+		.ranking-list li {
+			grid-template-columns: 2.2rem minmax(0, 1fr);
+		}
+
+		.saving-meter {
+			grid-column: 2;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.podium-card {
+			transition: none;
+		}
+
+		.place-1 .medal {
+			animation: none;
+		}
+	}
+</style>

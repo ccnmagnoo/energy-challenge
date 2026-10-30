@@ -1,0 +1,72 @@
+# 🏆 Ranking de ganadores de #EnergyChallenge
+#
+# Este archivo es la única fuente de datos de la página /ranking/.
+# Para actualizar el ranking de una nueva temporada:
+#   1. Cambia `anio`, `actualizado` y `bajada`.
+#   2. Reemplaza los bloques [[ganadores]] por los resultados oficiales.
+#   3. Mantén el orden por `puesto`: los tres primeros forman el podio.
+#
+# Los establecimientos y ahorros de ejemplo están basados en el podio 2025.
+# Reemplázalos por los resultados oficiales de la temporada antes de publicar.
+
+anio = 2025
+titulo = "Ganadores"
+actualizado = "30 de octubre de 2026"
+bajada = "Un año de luces bien utilizadas, hábitos nuevos y comunidades que demostraron que el ahorro energético también se celebra. Estos son los establecimientos que llegaron a lo más alto del podio."
+
+[[ganadores]]
+puesto = 1
+establecimiento = "Escuela Ulda Aracena González"
+comuna = "Nogales"
+ahorro = 38.4
+descripcion = "El ahorro más alto de la temporada, impulsado por una comunidad que se comprometió de principio a fin."
+
+[[ganadores]]
+puesto = 2
+establecimiento = "Santa María College"
+comuna = "Santa María"
+ahorro = 34.9
+descripcion = "Una campaña constante que convirtió pequeños hábitos diarios en grandes ahorros."
+
+[[ganadores]]
+puesto = 3
+establecimiento = "Liceo José Manuel Borgoño Núñez"
+comuna = "Petorca"
+ahorro = 31.7
+descripcion = "Creatividad y trabajo en equipo para reducir el consumo energético de todo el establecimiento."
+
+[[ganadores]]
+puesto = 4
+establecimiento = "Instituto Abdón Cifuentes"
+comuna = "San Felipe"
+ahorro = 29.8
+
+[[ganadores]]
+puesto = 5
+establecimiento = "Eleuterio Ramírez Molina"
+comuna = "Quilpué"
+ahorro = 28.6
+
+[[ganadores]]
+puesto = 6
+establecimiento = "Liceo Guillermo Cotapos"
+comuna = "Viña del Mar"
+ahorro = 27.4
+
+[[ganadores]]
+puesto = 7
+establecimiento = "Colegio Niño Jesús De Praga"
+comuna = "Quillota"
+ahorro = 26.1
+
+[[ganadores]]
+puesto = 8
+establecimiento = "Entidad Individual Educacional Soedine"
+comuna = "Los Andes"
+ahorro = 25.3
+
+[[ganadores]]
+puesto = 9
+establecimiento = "Escuela Básica El Porvenir"
+comuna = "Llay-Llay"
+ahorro = 24.5

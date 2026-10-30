@@ -14,9 +14,9 @@ Use npm: `node_modules` was installed with npm and `package-lock.json` is the cu
 
 ## Routing and page structure
 
-- `src/pages/` maps 1:1 to URLs: `/`, `/fullcolor/`, `/plan/`, `/records/`, `/rules/2026/`.
+- `src/pages/` maps 1:1 to URLs: `/`, `/fullcolor/`, `/plan/`, `/ranking/`, `/records/`, `/rules/2026/`.
 - Rules pages are year-named (`src/pages/rules/2026.astro`). A new season needs a new page plus updating the hardcoded `/rules/2026` links in `src/components/Subtitle.astro` and `src/components/WelcomeColor.astro`.
-- `src/components/ContentPage.astro` is the wrapper for inner pages (adds `HeroLogo` and the `.rules` prose styles on top of `LayoutColor`). Pass `hasPlayer={false}` to drop the fixed audio player.
+- `src/components/ContentPage.astro` is the wrapper for inner pages (adds `HeroLogo` and the `.rules` prose styles on top of `LayoutColor`). Pass `hasPlayer={false}` to drop the fixed audio player and `wide` for the full-width layout used by the ranking page.
 - Both layouts mount `ClientRouter`; the matching `transition:name` values (`heroLogo`, `heroYear`, `heroButton`) drive the cross-page hero animation. Keep them paired when moving components.
 
 ## Content, dates, and sponsors
@@ -25,6 +25,7 @@ Use npm: `node_modules` was installed with npm and `package-lock.json` is the cu
 - Known inconsistencies in that file: the constructor's `challengeMonth` argument is ignored (`setChallengePeriod(launch, 8)` hardcodes August), and `awardsDates` is still `new Date(2025, 11, 15, 12, 0)`. Fix these when rolling over a season.
 - The year is also hardcoded in copy, not derived from `ctx.year`: `#ec26` in `Player.astro`, "Noviembre 2026" in `SubscribeButton.astro`, `#ec25` in both layouts' meta descriptions, and "Registro 2022-2025" in `records/index.astro`. Grep the old year when updating.
 - The records table renders `src/assets/records.json` directly; edit the JSON, not the page markup.
+- The winners page (`/ranking/`) reads `src/data/ranking.toml` through `src/models/Ranking.ts`. Update `anio`, `actualizado`, `bajada` and the `[[ganadores]]` blocks there; the three lowest `puesto` values form the podium and the rest render as the positions table.
 
 ## Assets
 
