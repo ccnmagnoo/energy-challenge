@@ -2,6 +2,7 @@
 import ContentPage from '../../components/ContentPage.astro'
 import kittyWinners from '../../assets/kitties/kitties_winner.png'
 import { formatAhorro, ranking } from '../../models/Ranking'
+import Player from '../../components/Player.astro'
 
 const anio = ranking.anio
 const medallas = ['🥇', '🥈', '🥉']
@@ -128,6 +129,7 @@ const anchoBarra = (ahorro?: number) => {
 				<a class="innerlink" href="/records/">el registro histórico</a>.
 			</p>
 			<a class="button" href="/rules/2026">Conoce las bases del concurso</a>
+			<Player autoplay={true}/>
 		</footer>
 	</article>
 </ContentPage>

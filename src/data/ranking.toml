@@ -9,64 +9,64 @@
 # Los establecimientos y ahorros de ejemplo están basados en el podio 2025.
 # Reemplázalos por los resultados oficiales de la temporada antes de publicar.
 
-anio = 2025
+anio = 2026
 titulo = "Ganadores"
-actualizado = "30 de octubre de 2026"
+actualizado = "4 de noviembre de 2026"
 bajada = "Un año de luces bien utilizadas, hábitos nuevos y comunidades que demostraron que el ahorro energético también se celebra. Estos son los establecimientos que llegaron a lo más alto del podio."
 
 [[ganadores]]
 puesto = 1
-establecimiento = "Escuela Ulda Aracena González"
-comuna = "Nogales"
-ahorro = 38.4
+establecimiento = "Liceo Pedro de Valdivia"
+comuna = "La Calera"
+ahorro = 23.9
 descripcion = "El ahorro más alto de la temporada, impulsado por una comunidad que se comprometió de principio a fin."
 
 [[ganadores]]
 puesto = 2
-establecimiento = "Santa María College"
-comuna = "Santa María"
-ahorro = 34.9
+establecimiento = "Colegio María Montessori"
+comuna = "Los Andes"
+ahorro = 18.57
 descripcion = "Una campaña constante que convirtió pequeños hábitos diarios en grandes ahorros."
 
 [[ganadores]]
 puesto = 3
-establecimiento = "Liceo José Manuel Borgoño Núñez"
-comuna = "Petorca"
-ahorro = 31.7
+establecimiento = "Escuela Santa Rosa del Huerto"
+comuna = "La Calera"
+ahorro = 17.79
 descripcion = "Creatividad y trabajo en equipo para reducir el consumo energético de todo el establecimiento."
 
 [[ganadores]]
 puesto = 4
-establecimiento = "Instituto Abdón Cifuentes"
-comuna = "San Felipe"
-ahorro = 29.8
+establecimiento = "Eleuterio Eleuterio Ramirez Molina"
+comuna = "Quilpué"
+ahorro = 13.75
 
 [[ganadores]]
 puesto = 5
-establecimiento = "Eleuterio Ramírez Molina"
+establecimiento = "Colegio Nuevo Horizonte"
 comuna = "Quilpué"
-ahorro = 28.6
+ahorro = 7.84
 
 [[ganadores]]
 puesto = 6
-establecimiento = "Liceo Guillermo Cotapos"
-comuna = "Viña del Mar"
-ahorro = 27.4
+establecimiento = "Escuela Básica Rural San José"
+comuna = "Algarrobo"
+ahorro = 7.29
 
 [[ganadores]]
 puesto = 7
-establecimiento = "Colegio Niño Jesús De Praga"
-comuna = "Quillota"
-ahorro = 26.1
+establecimiento = "Escuela San Alberto"
+comuna = "Putaendo"
+ahorro = 6.19
 
 [[ganadores]]
 puesto = 8
-establecimiento = "Entidad Individual Educacional Soedine"
-comuna = "Los Andes"
-ahorro = 25.3
+establecimiento = "Liceo Guillermo Cotapos"
+comuna = "Viña del Mar"
+ahorro = -6.01
 
 [[ganadores]]
 puesto = 9
-establecimiento = "Escuela Básica El Porvenir"
-comuna = "Llay-Llay"
-ahorro = 24.5
+establecimiento = "Escuela España"
+comuna = "Los Andes"
+ahorro = -23.41
