@@ -7,6 +7,7 @@ export interface Ganador {
 	comuna: string
 	ahorro?: number
 	descripcion?: string
+	anio?:number
 }
 
 export interface Ranking {

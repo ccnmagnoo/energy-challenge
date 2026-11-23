@@ -20,6 +20,7 @@ establecimiento = "Liceo Pedro de Valdivia"
 comuna = "La Calera"
 ahorro = 23.9
 descripcion = "El ahorro más alto de la temporada, impulsado por una comunidad que se comprometió de principio a fin."
+anio = 2026
 
 [[ganadores]]
 puesto = 2
@@ -27,6 +28,8 @@ establecimiento = "Colegio María Montessori"
 comuna = "Los Andes"
 ahorro = 18.57
 descripcion = "Una campaña constante que convirtió pequeños hábitos diarios en grandes ahorros."
+anio = 2026
+
 
 [[ganadores]]
 puesto = 3
@@ -34,39 +37,53 @@ establecimiento = "Escuela Santa Rosa del Huerto"
 comuna = "La Calera"
 ahorro = 17.79
 descripcion = "Creatividad y trabajo en equipo para reducir el consumo energético de todo el establecimiento."
+anio = 2026
+
 
 [[ganadores]]
 puesto = 4
 establecimiento = "Eleuterio Eleuterio Ramirez Molina"
 comuna = "Quilpué"
 ahorro = 13.75
+anio = 2026
+
 
 [[ganadores]]
 puesto = 5
 establecimiento = "Colegio Nuevo Horizonte"
 comuna = "Quilpué"
 ahorro = 7.84
+anio = 2026
+
 
 [[ganadores]]
 puesto = 6
 establecimiento = "Escuela Básica Rural San José"
 comuna = "Algarrobo"
 ahorro = 7.29
+anio = 2026
+
 
 [[ganadores]]
 puesto = 7
 establecimiento = "Escuela San Alberto"
 comuna = "Putaendo"
 ahorro = 6.19
+anio = 2026
+
 
 [[ganadores]]
 puesto = 8
 establecimiento = "Liceo Guillermo Cotapos"
 comuna = "Viña del Mar"
 ahorro = -6.01
+anio = 2026
+
 
 [[ganadores]]
 puesto = 9
 establecimiento = "Escuela España"
 comuna = "Los Andes"
 ahorro = -23.41
+anio = 2026
+

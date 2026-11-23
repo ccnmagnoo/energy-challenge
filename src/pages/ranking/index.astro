@@ -3,6 +3,7 @@ import ContentPage from '../../components/ContentPage.astro'
 import kittyWinners from '../../assets/kitties/kitties_winner.png'
 import { formatAhorro, ranking } from '../../models/Ranking'
 import Player from '../../components/Player.astro'
+import { isAsync } from 'astro:schema'
 
 const anio = ranking.anio
 const medallas = ['🥇', '🥈', '🥉']
@@ -12,7 +13,7 @@ const lugares: Record<number, string> = {
 	3: '3er lugar'
 }
 
-const ganadores = ranking.ganadores
+const ganadores = ranking.ganadores.filter((it)=> anio == it.anio)
 const podio = ganadores.filter((it) => it.puesto <= 3).slice(0, 3)
 const resto = ganadores.filter((it) => it.puesto > 3)
 const ahorros = ganadores
